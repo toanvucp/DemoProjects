@@ -39,6 +39,8 @@
             this.cbxTTKT = new System.Windows.Forms.ComboBox();
             this.txtMoTa = new System.Windows.Forms.TextBox();
             this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
+            this.txtSoLuong = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.SuspendLayout();
             // 
             // btnHuy
@@ -47,10 +49,10 @@
             this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHuy.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnHuy.Location = new System.Drawing.Point(427, 314);
+            this.btnHuy.Location = new System.Drawing.Point(431, 368);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(117, 49);
-            this.btnHuy.TabIndex = 44;
+            this.btnHuy.TabIndex = 6;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = false;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
@@ -61,10 +63,10 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSave.Location = new System.Drawing.Point(252, 314);
+            this.btnSave.Location = new System.Drawing.Point(266, 368);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(117, 49);
-            this.btnSave.TabIndex = 43;
+            this.btnSave.TabIndex = 5;
             this.btnSave.Text = "Thêm mới";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -122,7 +124,7 @@
             this.txtSerialNumber.SelectionLength = 0;
             this.txtSerialNumber.SelectionStart = 0;
             this.txtSerialNumber.Size = new System.Drawing.Size(401, 23);
-            this.txtSerialNumber.TabIndex = 51;
+            this.txtSerialNumber.TabIndex = 0;
             this.txtSerialNumber.UseSystemPasswordChar = false;
             // 
             // materialLabel3
@@ -145,7 +147,7 @@
             this.cbxVatTu.Location = new System.Drawing.Point(297, 116);
             this.cbxVatTu.Name = "cbxVatTu";
             this.cbxVatTu.Size = new System.Drawing.Size(401, 29);
-            this.cbxVatTu.TabIndex = 55;
+            this.cbxVatTu.TabIndex = 1;
             // 
             // cbxTTKT
             // 
@@ -154,15 +156,16 @@
             this.cbxTTKT.Location = new System.Drawing.Point(297, 165);
             this.cbxTTKT.Name = "cbxTTKT";
             this.cbxTTKT.Size = new System.Drawing.Size(401, 29);
-            this.cbxTTKT.TabIndex = 56;
+            this.cbxTTKT.TabIndex = 2;
             // 
             // txtMoTa
             // 
-            this.txtMoTa.Location = new System.Drawing.Point(297, 212);
+            this.txtMoTa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMoTa.Location = new System.Drawing.Point(297, 265);
             this.txtMoTa.Multiline = true;
             this.txtMoTa.Name = "txtMoTa";
             this.txtMoTa.Size = new System.Drawing.Size(401, 61);
-            this.txtMoTa.TabIndex = 58;
+            this.txtMoTa.TabIndex = 4;
             // 
             // materialLabel6
             // 
@@ -170,18 +173,48 @@
             this.materialLabel6.Depth = 0;
             this.materialLabel6.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel6.Location = new System.Drawing.Point(130, 227);
+            this.materialLabel6.Location = new System.Drawing.Point(130, 270);
             this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel6.Name = "materialLabel6";
             this.materialLabel6.Size = new System.Drawing.Size(48, 19);
             this.materialLabel6.TabIndex = 59;
             this.materialLabel6.Text = "Mô tả";
             // 
+            // txtSoLuong
+            // 
+            this.txtSoLuong.Depth = 0;
+            this.txtSoLuong.Hint = "";
+            this.txtSoLuong.Location = new System.Drawing.Point(297, 219);
+            this.txtSoLuong.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtSoLuong.Name = "txtSoLuong";
+            this.txtSoLuong.PasswordChar = '\0';
+            this.txtSoLuong.SelectedText = "";
+            this.txtSoLuong.SelectionLength = 0;
+            this.txtSoLuong.SelectionStart = 0;
+            this.txtSoLuong.Size = new System.Drawing.Size(401, 23);
+            this.txtSoLuong.TabIndex = 3;
+            this.txtSoLuong.UseSystemPasswordChar = false;
+            // 
+            // materialLabel4
+            // 
+            this.materialLabel4.AutoSize = true;
+            this.materialLabel4.Depth = 0;
+            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel4.Location = new System.Drawing.Point(130, 223);
+            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel4.Name = "materialLabel4";
+            this.materialLabel4.Size = new System.Drawing.Size(69, 19);
+            this.materialLabel4.TabIndex = 60;
+            this.materialLabel4.Text = "Số lượng";
+            // 
             // frmCTPKT_ThemMoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(774, 385);
+            this.ClientSize = new System.Drawing.Size(774, 429);
+            this.Controls.Add(this.txtSoLuong);
+            this.Controls.Add(this.materialLabel4);
             this.Controls.Add(this.txtMoTa);
             this.Controls.Add(this.materialLabel6);
             this.Controls.Add(this.cbxTTKT);
@@ -214,5 +247,7 @@
         private System.Windows.Forms.ComboBox cbxTTKT;
         private System.Windows.Forms.TextBox txtMoTa;
         private MaterialSkin.Controls.MaterialLabel materialLabel6;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtSoLuong;
+        private MaterialSkin.Controls.MaterialLabel materialLabel4;
     }
 }

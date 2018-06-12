@@ -50,6 +50,7 @@ namespace QuanLyTBVT.NhapXuat
                 this.cbxVatTu.SelectedValue = model.MaVT;
                 this.cbxTTKT.SelectedValue = model.TrangThaiKT;
                 this.txtMoTa.Text = model.MoTa;
+                txtSoLuong.Text = model.SoLuong.ToString();
                 btnSave.Text = "Lưu";
 
                 this.Text = "Chỉnh sửa thông tin chi tiết phiếu kiểm tra";
@@ -76,12 +77,22 @@ namespace QuanLyTBVT.NhapXuat
                 MessageBox.Show("Serial Number không được để trống!", CommonConstant.MESSAGE_WARNING, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
+            try
+            {
+                int.Parse(txtSoLuong.Text.Trim());
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Số lượng không hợp lệ! Vui lòng kiểm tra lại!", CommonConstant.MESSAGE_WARNING, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             string info = "";
             if (flag)//sua ban ghi
             {
                 var model = db.ChiTietPhieuKTs.Find(ID);
                 model.SerialNumber = txtSerialNumber.Text.Trim();
-                model.SoLuong = 1;
+                model.SoLuong = int.Parse(txtSoLuong.Text.Trim());
                 model.TrangThaiKT = int.Parse(cbxTTKT.SelectedValue.ToString());
                 model.MaVT = cbxVatTu.SelectedValue.ToString();
                 model.MoTa = txtMoTa.Text;
@@ -91,7 +102,7 @@ namespace QuanLyTBVT.NhapXuat
             {
                 ChiTietPhieuKT obj = new ChiTietPhieuKT();
                 obj.SerialNumber = txtSerialNumber.Text.Trim();
-                obj.SoLuong = 1;
+                obj.SoLuong = int.Parse(txtSoLuong.Text.Trim());
                 obj.TrangThaiKT = int.Parse(cbxTTKT.SelectedValue.ToString());
                 obj.MaVT = cbxVatTu.SelectedValue.ToString();
                 obj.MaPhieuKT = StaticValue.MaPhieuKT;

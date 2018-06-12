@@ -336,8 +336,6 @@
             this.colPTKT.ColumnEdit = this.repositoryItemMemoEdit1;
             this.colPTKT.FieldName = "PTKT";
             this.colPTKT.Name = "colPTKT";
-            this.colPTKT.Visible = true;
-            this.colPTKT.VisibleIndex = 2;
             this.colPTKT.Width = 188;
             // 
             // colSoLuong
@@ -347,7 +345,7 @@
             this.colSoLuong.FieldName = "SoLuong";
             this.colSoLuong.Name = "colSoLuong";
             this.colSoLuong.Visible = true;
-            this.colSoLuong.VisibleIndex = 4;
+            this.colSoLuong.VisibleIndex = 3;
             this.colSoLuong.Width = 188;
             // 
             // colTTKT
@@ -357,7 +355,7 @@
             this.colTTKT.FieldName = "TrangThaiKT";
             this.colTTKT.Name = "colTTKT";
             this.colTTKT.Visible = true;
-            this.colTTKT.VisibleIndex = 3;
+            this.colTTKT.VisibleIndex = 2;
             this.colTTKT.Width = 188;
             // 
             // colTenVT
@@ -367,7 +365,7 @@
             this.colTenVT.FieldName = "TenVT";
             this.colTenVT.Name = "colTenVT";
             this.colTenVT.Visible = true;
-            this.colTenVT.VisibleIndex = 6;
+            this.colTenVT.VisibleIndex = 4;
             this.colTenVT.Width = 198;
             // 
             // colMoTa
