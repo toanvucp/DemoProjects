@@ -40,10 +40,13 @@ namespace QuanLyTBVT
             NhapXuat.frmCTPKT frm = new NhapXuat.frmCTPKT();
             frm.btnShow.Click += delegate
             {
+                Cursor.Current = Cursors.WaitCursor;
                 customersNavigationPage.Controls.Clear();
                 NhapXuat.frm_PhieuKT frm1 = new NhapXuat.frm_PhieuKT();
                 customersNavigationPage.Controls.Add(frm1);
                 navigationFrame.SelectedPageIndex = 1;
+                navBarControl.ActiveGroup = customersNavBarGroup;
+                Cursor.Current = Cursors.Default;
             };
             employeesNavigationPage.Controls.Add(frm);
         }

@@ -97,17 +97,50 @@
             // 
             // skinRibbonGalleryBarItem
             // 
+            // 
+            // 
+            // 
+            this.skinRibbonGalleryBarItem.Gallery.Appearance.ItemCaptionAppearance.Normal.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skinRibbonGalleryBarItem.Gallery.Appearance.ItemCaptionAppearance.Normal.Options.UseFont = true;
             this.skinRibbonGalleryBarItem.Id = 14;
+            this.skinRibbonGalleryBarItem.ItemAppearance.Disabled.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skinRibbonGalleryBarItem.ItemAppearance.Disabled.Options.UseFont = true;
+            this.skinRibbonGalleryBarItem.ItemAppearance.Hovered.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skinRibbonGalleryBarItem.ItemAppearance.Hovered.Options.UseFont = true;
+            this.skinRibbonGalleryBarItem.ItemAppearance.Normal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skinRibbonGalleryBarItem.ItemAppearance.Normal.Options.UseFont = true;
+            this.skinRibbonGalleryBarItem.ItemInMenuAppearance.Disabled.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skinRibbonGalleryBarItem.ItemInMenuAppearance.Disabled.Options.UseFont = true;
+            this.skinRibbonGalleryBarItem.ItemInMenuAppearance.Normal.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skinRibbonGalleryBarItem.ItemInMenuAppearance.Normal.Options.UseFont = true;
             this.skinRibbonGalleryBarItem.Name = "skinRibbonGalleryBarItem";
             // 
             // barSubItemNavigation
             // 
-            this.barSubItemNavigation.Caption = "Navigation";
+            this.barSubItemNavigation.Caption = "Điều Hướng";
             this.barSubItemNavigation.Id = 15;
             this.barSubItemNavigation.ImageUri.Uri = "NavigationBar";
             this.barSubItemNavigation.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.employeesBarButtonItem),
             new DevExpress.XtraBars.LinkPersistInfo(this.customersBarButtonItem)});
+            this.barSubItemNavigation.MenuAppearance.AppearanceMenu.Disabled.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.barSubItemNavigation.MenuAppearance.AppearanceMenu.Disabled.Options.UseFont = true;
+            this.barSubItemNavigation.MenuAppearance.AppearanceMenu.Hovered.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.barSubItemNavigation.MenuAppearance.AppearanceMenu.Hovered.Options.UseFont = true;
+            this.barSubItemNavigation.MenuAppearance.AppearanceMenu.Normal.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.barSubItemNavigation.MenuAppearance.AppearanceMenu.Normal.Options.UseFont = true;
+            this.barSubItemNavigation.MenuAppearance.AppearanceMenu.Pressed.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.barSubItemNavigation.MenuAppearance.AppearanceMenu.Pressed.Options.UseFont = true;
+            this.barSubItemNavigation.MenuAppearance.HeaderItemAppearance.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.barSubItemNavigation.MenuAppearance.HeaderItemAppearance.Options.UseFont = true;
+            this.barSubItemNavigation.MenuAppearance.MenuBar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.barSubItemNavigation.MenuAppearance.MenuBar.Options.UseFont = true;
+            this.barSubItemNavigation.MenuAppearance.MenuCaption.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.barSubItemNavigation.MenuAppearance.MenuCaption.Options.UseFont = true;
+            this.barSubItemNavigation.MenuAppearance.SideStrip.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.barSubItemNavigation.MenuAppearance.SideStrip.Options.UseFont = true;
+            this.barSubItemNavigation.MenuAppearance.SideStripNonRecent.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.barSubItemNavigation.MenuAppearance.SideStripNonRecent.Options.UseFont = true;
             this.barSubItemNavigation.Name = "barSubItemNavigation";
             // 
             // employeesBarButtonItem
