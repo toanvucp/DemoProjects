@@ -106,5 +106,42 @@ namespace QuanLyTBVT.Common
             return result;
         }
 
+        public List<SelectedCbxModel> GetCbxVatTu(bool isAdd)
+        {
+            db = new DBQLVT();
+            List<SelectedCbxModel> result = new List<SelectedCbxModel>();
+            result = db.VatTus.ToList().Select(m => new SelectedCbxModel()
+            {
+                DisPlayMember = m.MaVT + " - " + m.TenVT,
+                ValueMember = m.MaVT
+            }).ToList();
+            if (isAdd)
+            {
+                SelectedCbxModel sel = new SelectedCbxModel();
+                sel.ValueMember = "";
+                sel.DisPlayMember = "---Chọn---";
+                result.Insert(0, sel);
+            }
+            return result;
+        }
+
+        public List<SelectedCbxModel> GetCbxStatusKTTB(bool isAdd)
+        {
+            db = new DBQLVT();
+            List<SelectedCbxModel> result = new List<SelectedCbxModel>();
+            result.Add(new SelectedCbxModel() { DisPlayMember = "Đạt", ValueMember = "1" });
+            result.Add(new SelectedCbxModel() { DisPlayMember = "Không Đạt", ValueMember = "0" });
+            return result;
+        }
+
+        public List<SelectedCbxModel> GetCbxPTKT(bool isAdd)
+        {
+            db = new DBQLVT();
+            List<SelectedCbxModel> result = new List<SelectedCbxModel>();
+            result.Add(new SelectedCbxModel() { DisPlayMember = "Phương thức kiểm tra 1", ValueMember = "Phương thức kiểm tra 1" });
+            result.Add(new SelectedCbxModel() { DisPlayMember = "Phương thức kiểm tra 2", ValueMember = "Phương thức kiểm tra 2" });
+            result.Add(new SelectedCbxModel() { DisPlayMember = "Phương thức kiểm tra 3", ValueMember = "Phương thức kiểm tra 3" });
+            return result;
+        }
     }
 }

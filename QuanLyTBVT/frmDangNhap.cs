@@ -52,7 +52,7 @@ namespace QuanLyTBVT
                 {
                     StaticValue.UserLogin = model;
                     //Dang nhap thanh cong:
-                    Home frm = new Home();
+                    TrangChu frm = new TrangChu();
                     this.Hide();
                     frm.Show();
                     MessageBox.Show(string.Format("Đăng nhập thành công! Xin chào {0}",model.TenNV), CommonConstant.MESSAGE_INFO,MessageBoxButtons.OK,MessageBoxIcon.Information );

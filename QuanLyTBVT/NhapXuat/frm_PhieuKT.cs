@@ -198,5 +198,16 @@ namespace QuanLyTBVT.NhapXuat
             };
             frm.ShowDialog();
         }
+
+        private void btnDetails_Click(object sender, EventArgs e)
+        {
+            string maPhieuKT = grvData.GetRowCellValue(grvData.FocusedRowHandle, "MaPhieuKT").ToString();
+            if (string.IsNullOrEmpty(maPhieuKT))
+            {
+                MessageBox.Show(string.Format("Vui lòng chọn bản ghi cần xem!"), CommonConstant.MESSAGE_WARNING, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            StaticValue.MaPhieuKT = maPhieuKT;
+        }
     }
 }

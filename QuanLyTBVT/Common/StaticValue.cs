@@ -10,7 +10,7 @@ namespace QuanLyTBVT.Common
     public static class StaticValue
     {
         public static NhanVien UserLogin;
-        
-         
+
+        public static string MaPhieuKT;
     }
 }

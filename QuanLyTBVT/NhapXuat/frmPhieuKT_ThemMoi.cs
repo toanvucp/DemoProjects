@@ -55,7 +55,7 @@ namespace QuanLyTBVT.NhapXuat
                 }
                 btnSave.Text = "Lưu";
 
-                this.Text = "Chỉnh sửa thông tin nhà cung cấp";
+                this.Text = "Chỉnh sửa thông tin phiếu kiểm tra";
                 this.Refresh();
             }
         }

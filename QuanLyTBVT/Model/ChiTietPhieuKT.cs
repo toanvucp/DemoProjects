@@ -13,7 +13,6 @@ namespace QuanLyTBVT.Model
         [Column(Order = 0)]
         public int MaCTKT { get; set; }
 
-        [Key]
         [Column(Order = 1)]
         [StringLength(50)]
         public string MaPhieuKT { get; set; }

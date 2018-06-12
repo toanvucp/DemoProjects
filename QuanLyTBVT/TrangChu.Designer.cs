@@ -29,18 +29,25 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrangChu));
             this.tabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.skinRibbonGalleryBarItem = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             this.barSubItemNavigation = new DevExpress.XtraBars.BarSubItem();
             this.employeesBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.customersBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnShowKhoVT = new DevExpress.XtraBars.BarButtonItem();
+            this.btnShowPhieuKT = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnShowPN = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroupNavigation = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.navBarControl = new DevExpress.XtraNavBar.NavBarControl();
             this.employeesNavBarGroup = new DevExpress.XtraNavBar.NavBarGroup();
@@ -81,14 +88,18 @@
             this.barSubItemNavigation,
             this.employeesBarButtonItem,
             this.customersBarButtonItem,
-            this.barButtonItem1});
+            this.btnShowKhoVT,
+            this.btnShowPhieuKT,
+            this.barButtonItem2,
+            this.btnShowPN});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 1;
+            this.ribbonControl.MaxItemId = 4;
             this.ribbonControl.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage,
-            this.ribbonPage1});
+            this.ribbonPage1,
+            this.ribbonPage2});
             this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.ribbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl.Size = new System.Drawing.Size(917, 151);
@@ -157,12 +168,40 @@
             this.customersBarButtonItem.Name = "customersBarButtonItem";
             this.customersBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonNavigation_ItemClick);
             // 
-            // barButtonItem1
+            // btnShowKhoVT
             // 
-            this.barButtonItem1.Caption = "barButtonItem1";
-            this.barButtonItem1.Id = 46;
-            this.barButtonItem1.Name = "barButtonItem1";
-            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
+            this.btnShowKhoVT.Caption = "Quản lý Kho vật tư";
+            this.btnShowKhoVT.Glyph = ((System.Drawing.Image)(resources.GetObject("btnShowKhoVT.Glyph")));
+            this.btnShowKhoVT.Id = 46;
+            this.btnShowKhoVT.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnShowKhoVT.LargeGlyph")));
+            this.btnShowKhoVT.Name = "btnShowKhoVT";
+            this.btnShowKhoVT.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
+            // 
+            // btnShowPhieuKT
+            // 
+            this.btnShowPhieuKT.Caption = "Quản lý Phiếu Kiểm tra";
+            this.btnShowPhieuKT.Id = 1;
+            this.btnShowPhieuKT.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnShowPhieuKT.LargeGlyph")));
+            this.btnShowPhieuKT.Name = "btnShowPhieuKT";
+            this.btnShowPhieuKT.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnShowPhieuKT_ItemClick);
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "Quản lý Chi tiết Phiếu \r\nKiểm tra\r\n";
+            this.barButtonItem2.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.Glyph")));
+            this.barButtonItem2.Id = 2;
+            this.barButtonItem2.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.LargeGlyph")));
+            this.barButtonItem2.Name = "barButtonItem2";
+            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
+            // 
+            // btnShowPN
+            // 
+            this.btnShowPN.Caption = "Quản lý Phiếu nhập";
+            this.btnShowPN.Glyph = ((System.Drawing.Image)(resources.GetObject("btnShowPN.Glyph")));
+            this.btnShowPN.Id = 3;
+            this.btnShowPN.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnShowPN.LargeGlyph")));
+            this.btnShowPN.Name = "btnShowPN";
+            this.btnShowPN.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnShowPN_ItemClick);
             // 
             // ribbonPage
             // 
@@ -193,13 +232,34 @@
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup2});
             this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "ribbonPage1";
+            this.ribbonPage1.Text = "Quản lý danh mục";
             // 
             // ribbonPageGroup2
             // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem1);
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnShowKhoVT);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "ribbonPageGroup2";
+            // 
+            // ribbonPage2
+            // 
+            this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup3,
+            this.ribbonPageGroup4});
+            this.ribbonPage2.Name = "ribbonPage2";
+            this.ribbonPage2.Text = "Quản lý Nhập Xuất Vật tư";
+            // 
+            // ribbonPageGroup3
+            // 
+            this.ribbonPageGroup3.ItemLinks.Add(this.btnShowPhieuKT);
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem2);
+            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            this.ribbonPageGroup3.Text = "Quản lý Kiểm tra Vật tư - Thiết bị";
+            // 
+            // ribbonPageGroup4
+            // 
+            this.ribbonPageGroup4.ItemLinks.Add(this.btnShowPN);
+            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
+            this.ribbonPageGroup4.Text = "Quản lý Nhập Vật Tư Thiết bị";
             // 
             // ribbonStatusBar
             // 
@@ -218,7 +278,7 @@
             this.navBarControl.Location = new System.Drawing.Point(0, 151);
             this.navBarControl.Name = "navBarControl";
             this.navBarControl.OptionsNavPane.ExpandedWidth = 165;
-            this.navBarControl.Size = new System.Drawing.Size(165, 258);
+            this.navBarControl.Size = new System.Drawing.Size(165, 276);
             this.navBarControl.TabIndex = 0;
             this.navBarControl.Text = "navBarControl";
             this.navBarControl.Visible = false;
@@ -248,7 +308,7 @@
             this.customersNavigationPage});
             this.navigationFrame.RibbonAndBarsMergeStyle = DevExpress.XtraBars.Docking2010.Views.RibbonAndBarsMergeStyle.Always;
             this.navigationFrame.SelectedPage = this.employeesNavigationPage;
-            this.navigationFrame.Size = new System.Drawing.Size(752, 258);
+            this.navigationFrame.Size = new System.Drawing.Size(752, 276);
             this.navigationFrame.TabIndex = 0;
             this.navigationFrame.Text = "navigationFrame";
             // 
@@ -256,7 +316,7 @@
             // 
             this.employeesNavigationPage.Controls.Add(this.employeesLabelControl);
             this.employeesNavigationPage.Name = "employeesNavigationPage";
-            this.employeesNavigationPage.Size = new System.Drawing.Size(752, 258);
+            this.employeesNavigationPage.Size = new System.Drawing.Size(752, 276);
             // 
             // employeesLabelControl
             // 
@@ -268,7 +328,7 @@
             this.employeesLabelControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.employeesLabelControl.Location = new System.Drawing.Point(0, 0);
             this.employeesLabelControl.Name = "employeesLabelControl";
-            this.employeesLabelControl.Size = new System.Drawing.Size(752, 258);
+            this.employeesLabelControl.Size = new System.Drawing.Size(752, 276);
             this.employeesLabelControl.TabIndex = 0;
             this.employeesLabelControl.Text = "Hệ thống";
             // 
@@ -276,7 +336,7 @@
             // 
             this.customersNavigationPage.Controls.Add(this.customersLabelControl);
             this.customersNavigationPage.Name = "customersNavigationPage";
-            this.customersNavigationPage.Size = new System.Drawing.Size(752, 258);
+            this.customersNavigationPage.Size = new System.Drawing.Size(752, 276);
             // 
             // customersLabelControl
             // 
@@ -288,7 +348,7 @@
             this.customersLabelControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.customersLabelControl.Location = new System.Drawing.Point(0, 0);
             this.customersLabelControl.Name = "customersLabelControl";
-            this.customersLabelControl.Size = new System.Drawing.Size(752, 258);
+            this.customersLabelControl.Size = new System.Drawing.Size(752, 276);
             this.customersLabelControl.TabIndex = 1;
             this.customersLabelControl.Text = "Customers";
             // 
@@ -296,10 +356,10 @@
             // 
             this.officeNavigationBar.AutoSize = false;
             this.officeNavigationBar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.officeNavigationBar.Location = new System.Drawing.Point(0, 409);
+            this.officeNavigationBar.Location = new System.Drawing.Point(0, 427);
             this.officeNavigationBar.Name = "officeNavigationBar";
             this.officeNavigationBar.NavigationClient = this.navBarControl;
-            this.officeNavigationBar.Size = new System.Drawing.Size(917, 45);
+            this.officeNavigationBar.Size = new System.Drawing.Size(917, 27);
             this.officeNavigationBar.TabIndex = 1;
             this.officeNavigationBar.Text = "officeNavigationBar";
             // 
@@ -354,6 +414,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TrangChu_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl)).EndInit();
@@ -393,8 +454,14 @@
         private DevExpress.XtraBars.Ribbon.BackstageViewControl backstageViewControl1;
         private DevExpress.XtraBars.Ribbon.BackstageViewClientControl backstageViewClientControl1;
         private DevExpress.XtraBars.Ribbon.BackstageViewTabItem backstageViewTabItem1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem btnShowKhoVT;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+        private DevExpress.XtraBars.BarButtonItem btnShowPhieuKT;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+        private DevExpress.XtraBars.BarButtonItem btnShowPN;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
     }
 }

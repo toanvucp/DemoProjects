@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using QuanLyTBVT.Common;
 
 namespace QuanLyTBVT
 {
@@ -37,18 +38,52 @@ namespace QuanLyTBVT
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             employeesNavigationPage.Controls.Clear();
-            NhapXuat.frmCTPKT frm = new NhapXuat.frmCTPKT();
-            frm.btnShow.Click += delegate
+            DanhMuc.frmKhoVT frm = new DanhMuc.frmKhoVT();
+            employeesNavigationPage.Controls.Add(frm);
+        }
+
+        private void btnShowPhieuKT_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            employeesNavigationPage.Controls.Clear();
+            NhapXuat.frm_PhieuKT frm = new NhapXuat.frm_PhieuKT();
+            frm.btnDetails.Click += delegate
             {
                 Cursor.Current = Cursors.WaitCursor;
                 customersNavigationPage.Controls.Clear();
-                NhapXuat.frm_PhieuKT frm1 = new NhapXuat.frm_PhieuKT();
+                NhapXuat.frmCTPKT frm1 = new NhapXuat.frmCTPKT();
                 customersNavigationPage.Controls.Add(frm1);
                 navigationFrame.SelectedPageIndex = 1;
                 navBarControl.ActiveGroup = customersNavBarGroup;
                 Cursor.Current = Cursors.Default;
             };
             employeesNavigationPage.Controls.Add(frm);
+        }
+
+        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (string.IsNullOrEmpty(StaticValue.MaPhieuKT))
+            {
+                MessageBox.Show("Vui lòng chọn phiếu kiểm tra để có thể thực hiện được chức năng này!", CommonConstant.MESSAGE_WARNING, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            //show 
+            Cursor.Current = Cursors.WaitCursor;
+            customersNavigationPage.Controls.Clear();
+            NhapXuat.frmCTPKT frm1 = new NhapXuat.frmCTPKT();
+            customersNavigationPage.Controls.Add(frm1);
+            navigationFrame.SelectedPageIndex = 1;
+            navBarControl.ActiveGroup = customersNavBarGroup;
+            Cursor.Current = Cursors.Default;
+        }
+
+        private void TrangChu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnShowPN_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
         }
     }
 }
