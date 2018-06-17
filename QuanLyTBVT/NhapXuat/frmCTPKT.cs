@@ -66,7 +66,8 @@ namespace QuanLyTBVT.NhapXuat
                             TrangThaiKT = m.TrangThaiKT == 0 ? "Không Đạt" : (m.TrangThaiKT == 1 ? "Đạt" : ""),
                             STT = index + 1,
                             m.MaCTKT,
-                            vt.TenVT
+                            vt.TenVT,
+                            m.TrangThaiVT
                         };
             BindingSource bs = new BindingSource();
             bs.DataSource = model.ToList();
@@ -96,7 +97,8 @@ namespace QuanLyTBVT.NhapXuat
                             TrangThaiKT = m.TrangThaiKT == 0 ? "Không Đạt" : (m.TrangThaiKT == 1 ? "Đạt" : ""),
                             STT = index + 1,
                             m.MaCTKT,
-                            vt.TenVT
+                            vt.TenVT,
+                            m.TrangThaiVT
                         };
             BindingSource bs = new BindingSource();
             bs.DataSource = model.ToList();

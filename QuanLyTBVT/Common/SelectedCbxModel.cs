@@ -13,6 +13,8 @@ namespace QuanLyTBVT.Common
         public string ValueMember { get; set; }
 
         public string DisPlayMember { get; set; }
+
+        public int? SL { get; set; }
     }
 
 
@@ -134,6 +136,21 @@ namespace QuanLyTBVT.Common
             return result;
         }
 
+        public List<SelectedCbxModel> GetCbxKhoVT(bool isSearch)
+        {
+            db = new DBQLVT();
+            List<SelectedCbxModel> result = new List<SelectedCbxModel>();
+            result = db.KhoVatTus.Select(m => new SelectedCbxModel() { DisPlayMember = m.TenKhoVT, ValueMember = m.MaKhoVT }).ToList();
+            if (isSearch)
+            {
+                SelectedCbxModel sel = new SelectedCbxModel();
+                sel.ValueMember = "";
+                sel.DisPlayMember = "---Chọn---";
+                result.Insert(0, sel);
+            }
+            return result;
+        }
+
         public List<SelectedCbxModel> GetCbxPTKT(bool isAdd)
         {
             db = new DBQLVT();
@@ -142,6 +159,55 @@ namespace QuanLyTBVT.Common
             result.Add(new SelectedCbxModel() { DisPlayMember = "Phương thức kiểm tra 2", ValueMember = "Phương thức kiểm tra 2" });
             result.Add(new SelectedCbxModel() { DisPlayMember = "Phương thức kiểm tra 3", ValueMember = "Phương thức kiểm tra 3" });
             return result;
+        }
+
+        public List<SelectedCbxModel> GetCbxTTVT(bool isAdd)
+        {
+            db = new DBQLVT();
+            List<SelectedCbxModel> result = new List<SelectedCbxModel>();
+            result.Add(new SelectedCbxModel() { DisPlayMember = "Mới", ValueMember = "Mới" });
+            result.Add(new SelectedCbxModel() { DisPlayMember = "Like new", ValueMember = "Like new" });
+            result.Add(new SelectedCbxModel() { DisPlayMember = "Lỗi", ValueMember = "Lỗi" });
+            result.Add(new SelectedCbxModel() { DisPlayMember = "Hỏng", ValueMember = "Hỏng" });
+            return result;
+        }
+
+
+        public List<SelectedCbxModel> GetCbxPhieuKT(string trangThai)
+        {
+            db = new DBQLVT();
+            List<SelectedCbxModel> result = new List<SelectedCbxModel>();
+            result = db.PhieuKTs.Where(m => m.TrangThai.Equals(trangThai)).Select(m => new SelectedCbxModel() { DisPlayMember = m.MaPhieuKT, ValueMember = m.MaPhieuKT}).ToList();
+            return result;
+        }
+
+        public List<SelectedCbxModel> GetcbxPhieuYeuCau(string trangThai, bool isAdd)
+        {
+            db = new DBQLVT();
+            List<SelectedCbxModel> result = new List<SelectedCbxModel>();
+            result = db.PhieuYCs.Where(m => m.TrangThai.Equals(trangThai)).Select(m => new SelectedCbxModel() { DisPlayMember = m.MaPhieuYC, ValueMember = m.MaPhieuYC }).ToList();
+            return result;
+        }
+
+        public List<SelectedCbxModel> GetCbxVatTuInKho(bool isAdd, string maPX)
+        {
+            db = new DBQLVT();
+            List<SelectedCbxModel> result = new List<SelectedCbxModel>();
+            var s = db.PhieuXuats.Find(maPX).MaKhoXuat;
+            var model = db.ChiTietKhoVatTus.Where(m => m.MaKhoVT == s)
+                .GroupBy(a => a.MaVT).Select(p => new { MaVT = p.Key, SoLuongTK = p.Sum(q => q.SoLuong) });
+            var mos = model.ToList();
+            var results = from m in db.VatTus
+                          join n in mos on m.MaVT equals n.MaVT
+                          select new SelectedCbxModel() { DisPlayMember = m.MaVT + " - " + m.TenVT, ValueMember = n.MaVT , SL = n.SoLuongTK};
+            if (isAdd)
+            {
+                SelectedCbxModel sel = new SelectedCbxModel();
+                sel.ValueMember = "";
+                sel.DisPlayMember = "---Chọn---";
+                results.ToList().Insert(0, sel);
+            }
+            return results.ToList();
         }
     }
 }

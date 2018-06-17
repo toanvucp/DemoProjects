@@ -48,17 +48,33 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.CodeParser.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v16.1.UI, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v16.1.Core, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v16.1.Core, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v16.1.Core, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v16.1.Core, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Sparkline.v16.1.Core, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v16.1.UI, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v16.1.Extensions, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v16.1.Wizard, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v16.1.Core, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraGrid.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraNavBar.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v16.1.Extensions, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeList.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -73,7 +89,11 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -87,6 +107,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaoCao\frmThongKeKho.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaoCao\frmThongKeKho.Designer.cs">
+      <DependentUpon>frmThongKeKho.cs</DependentUpon>
+    </Compile>
     <Compile Include="Common\CommonConstant.cs" />
     <Compile Include="Common\SelectedCbxModel.cs" />
     <Compile Include="Common\StaticValue.cs" />
@@ -175,12 +201,6 @@
     <Compile Include="frmDoiMK.Designer.cs">
       <DependentUpon>frmDoiMK.cs</DependentUpon>
     </Compile>
-    <Compile Include="Home.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
-    </Compile>
     <Compile Include="Model\ChiTietKhoVatTu.cs" />
     <Compile Include="Model\ChiTietPhieuKT.cs" />
     <Compile Include="Model\ChiTietPhieuNhap.cs" />
@@ -198,6 +218,36 @@
     <Compile Include="Model\PhieuYC.cs" />
     <Compile Include="Model\PXTD.cs" />
     <Compile Include="Model\VatTu.cs" />
+    <Compile Include="NhapXuat\frmChiTietPhieuNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NhapXuat\frmChiTietPhieuNhap.Designer.cs">
+      <DependentUpon>frmChiTietPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhapXuat\frmChiTietPhieuXuat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NhapXuat\frmChiTietPhieuXuat.Designer.cs">
+      <DependentUpon>frmChiTietPhieuXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhapXuat\frmChiTietPhieuXuat_ThemMoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhapXuat\frmChiTietPhieuXuat_ThemMoi.Designer.cs">
+      <DependentUpon>frmChiTietPhieuXuat_ThemMoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhapXuat\frmChiTietPYC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NhapXuat\frmChiTietPYC.Designer.cs">
+      <DependentUpon>frmChiTietPYC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhapXuat\frmChiTietPYC_ThemMoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhapXuat\frmChiTietPYC_ThemMoi.Designer.cs">
+      <DependentUpon>frmChiTietPYC_ThemMoi.cs</DependentUpon>
+    </Compile>
     <Compile Include="NhapXuat\frmCTPKT.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -216,6 +266,42 @@
     <Compile Include="NhapXuat\frmPhieuKT_ThemMoi.Designer.cs">
       <DependentUpon>frmPhieuKT_ThemMoi.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhapXuat\frmPhieuNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NhapXuat\frmPhieuNhap.Designer.cs">
+      <DependentUpon>frmPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhapXuat\frmPhieuNhap_ThemMoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhapXuat\frmPhieuNhap_ThemMoi.Designer.cs">
+      <DependentUpon>frmPhieuNhap_ThemMoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhapXuat\frmPhieuXuat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NhapXuat\frmPhieuXuat.Designer.cs">
+      <DependentUpon>frmPhieuXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhapXuat\frmPhieuXuat_ThemMoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhapXuat\frmPhieuXuat_ThemMoi.Designer.cs">
+      <DependentUpon>frmPhieuXuat_ThemMoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhapXuat\frmPhieuYC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NhapXuat\frmPhieuYC.Designer.cs">
+      <DependentUpon>frmPhieuYC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhapXuat\frmPhieuYC_ThemMoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhapXuat\frmPhieuYC_ThemMoi.Designer.cs">
+      <DependentUpon>frmPhieuYC_ThemMoi.cs</DependentUpon>
+    </Compile>
     <Compile Include="NhapXuat\frm_PhieuKT.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -230,6 +316,9 @@
     <Compile Include="TrangChu.Designer.cs">
       <DependentUpon>TrangChu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BaoCao\frmThongKeKho.resx">
+      <DependentUpon>frmThongKeKho.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\frmDonVi.resx">
       <DependentUpon>frmDonVi.cs</DependentUpon>
     </EmbeddedResource>
@@ -272,8 +361,20 @@
     <EmbeddedResource Include="frmDoiMK.resx">
       <DependentUpon>frmDoiMK.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
+    <EmbeddedResource Include="NhapXuat\frmChiTietPhieuNhap.resx">
+      <DependentUpon>frmChiTietPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhapXuat\frmChiTietPhieuXuat.resx">
+      <DependentUpon>frmChiTietPhieuXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhapXuat\frmChiTietPhieuXuat_ThemMoi.resx">
+      <DependentUpon>frmChiTietPhieuXuat_ThemMoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhapXuat\frmChiTietPYC.resx">
+      <DependentUpon>frmChiTietPYC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhapXuat\frmChiTietPYC_ThemMoi.resx">
+      <DependentUpon>frmChiTietPYC_ThemMoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhapXuat\frmCTPKT.resx">
       <DependentUpon>frmCTPKT.cs</DependentUpon>
@@ -283,6 +384,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NhapXuat\frmPhieuKT_ThemMoi.resx">
       <DependentUpon>frmPhieuKT_ThemMoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhapXuat\frmPhieuNhap.resx">
+      <DependentUpon>frmPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhapXuat\frmPhieuNhap_ThemMoi.resx">
+      <DependentUpon>frmPhieuNhap_ThemMoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhapXuat\frmPhieuXuat.resx">
+      <DependentUpon>frmPhieuXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhapXuat\frmPhieuXuat_ThemMoi.resx">
+      <DependentUpon>frmPhieuXuat_ThemMoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhapXuat\frmPhieuYC.resx">
+      <DependentUpon>frmPhieuYC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhapXuat\frmPhieuYC_ThemMoi.resx">
+      <DependentUpon>frmPhieuYC_ThemMoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhapXuat\frm_PhieuKT.resx">
       <DependentUpon>frm_PhieuKT.cs</DependentUpon>
@@ -336,6 +455,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

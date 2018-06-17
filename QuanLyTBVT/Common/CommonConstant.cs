@@ -9,7 +9,7 @@ namespace QuanLyTBVT.Common
 {
     public static class CommonConstant
     {
-        public static readonly string MESSAGE_INFO ="THÔNG BÁO";
+        public static readonly string MESSAGE_INFO = "THÔNG BÁO";
 
         public static readonly string MESSAGE_WARNING = "CẢNH BÁO";
 
@@ -24,5 +24,13 @@ namespace QuanLyTBVT.Common
         public static readonly string STATUS_MOI = "Mới";
 
         public static readonly string STATUS_DANHAP = "Đã Nhập";
+
+        public static readonly string STATUS_CHITIETKHO_MOI = "Mới";
+
+        public static readonly string STATUS_CHITIETKHO_DANGXUAT = "Đang xuất";
+
+        public static readonly string STATUS_CHITIETKHO_DAXUAT = "Đã xuất";
+
+        public static bool ISSHOWBTNDUYET = StaticValue.UserLogin != null && StaticValue.UserLogin.RoleID.Equals("Nhân viên duyệt phiếu");
     }
 }

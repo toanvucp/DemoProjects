@@ -16,6 +16,9 @@ namespace QuanLyTBVT.Model
         [StringLength(50)]
         public string MaNCC { get; set; }
 
+        [StringLength(50)]
+        public string MaKhoVT { get; set; }
+
         [Column(TypeName = "date")]
         public DateTime? NgayLap { get; set; }
 
@@ -30,5 +33,12 @@ namespace QuanLyTBVT.Model
 
         [StringLength(250)]
         public string NoiDung { get; set; }
+
+        [StringLength(50)]
+        public string TrangThai { get; set; }
+
+        [StringLength(50)]
+        public string MaPhieuKT { get; set; }
+
     }
 }

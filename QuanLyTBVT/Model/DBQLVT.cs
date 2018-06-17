@@ -38,11 +38,6 @@ namespace QuanLyTBVT.Model
                 .Property(e => e.MaVT)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<ChiTietKhoVatTu>()
-                .Property(e => e.TriGiaTonKho)
-                .HasPrecision(19, 4);
-
-
             modelBuilder.Entity<ChiTietPhieuKT>()
                 .Property(e => e.MaPhieuKT)
                 .IsUnicode(false);
@@ -63,17 +58,12 @@ namespace QuanLyTBVT.Model
                 .Property(e => e.MaVT)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<ChiTietPhieuNhap>()
-                .Property(e => e.MaKhoVT)
-                .IsUnicode(false);
+           
 
             modelBuilder.Entity<ChiTietPhieuNhap>()
                 .Property(e => e.SerialNumber)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<ChiTietPhieuNhap>()
-                .Property(e => e.MaNCC)
-                .IsUnicode(false);
 
             modelBuilder.Entity<ChiTietPhieuNhap>()
                 .Property(e => e.DonGia)
@@ -84,19 +74,7 @@ namespace QuanLyTBVT.Model
                 .IsUnicode(false);
 
             modelBuilder.Entity<ChiTietPhieuXuat>()
-                .Property(e => e.MaPhieuYC)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<ChiTietPhieuXuat>()
-                .Property(e => e.MaPhieuKT)
-                .IsFixedLength();
-
-            modelBuilder.Entity<ChiTietPhieuXuat>()
                 .Property(e => e.MaVT)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<ChiTietPhieuXuat>()
-                .Property(e => e.MaKhoVT)
                 .IsUnicode(false);
 
             modelBuilder.Entity<ChiTietPhieuXuat>()
@@ -109,14 +87,6 @@ namespace QuanLyTBVT.Model
 
             modelBuilder.Entity<ChiTietPhieuYC>()
                 .Property(e => e.MaPhieuYC)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<ChiTietPhieuYC>()
-                .Property(e => e.NguoiDuyet)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<ChiTietPhieuYC>()
-                .Property(e => e.MaKhoVT)
                 .IsUnicode(false);
 
             modelBuilder.Entity<KhoVatTu>()
@@ -191,9 +161,6 @@ namespace QuanLyTBVT.Model
                 .Property(e => e.MaPX)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<PhieuXuat>()
-                .Property(e => e.MaPXTD)
-                .IsUnicode(false);
 
             modelBuilder.Entity<PhieuXuat>()
                 .Property(e => e.NguoiLap)
@@ -215,10 +182,7 @@ namespace QuanLyTBVT.Model
                 .Property(e => e.NguoiDuyet)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<PhieuYC>()
-                .Property(e => e.MaKhoVT)
-                .IsUnicode(false);
-
+         
             modelBuilder.Entity<PXTD>()
                 .Property(e => e.MaPXTD)
                 .IsUnicode(false);

@@ -26,9 +26,14 @@ namespace QuanLyTBVT.Model
         [StringLength(50)]
         public string NguoiDuyet { get; set; }
 
-        public int? TrangThai { get; set; }
+        public string TrangThai { get; set; }
 
         [StringLength(50)]
-        public string MaKhoVT { get; set; }
+        public string MaKhoYC { get; set; }
+
+        [StringLength(50)]
+        public string MaKhoXuat { get; set; }
+
+        
     }
 }

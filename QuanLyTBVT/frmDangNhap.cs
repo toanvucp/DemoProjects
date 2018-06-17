@@ -37,7 +37,7 @@ namespace QuanLyTBVT
         private void btnLogin_Click(object sender, EventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;
-            Login(txtAccount.Text,txtPassword.Text);
+            Login(txtAccount.Text, txtPassword.Text);
             Cursor.Current = Cursors.Default;
         }
         private DBQLVT db = new DBQLVT();
@@ -46,17 +46,18 @@ namespace QuanLyTBVT
         {
             try
             {
-                var model = (from m in db.NhanViens where m.MaNV == user && m.Password == password select m).FirstOrDefault();
+                var model = (from m in db.NhanViens where m.MaNV.ToLower() == user.ToLower() && m.Password == password select m).FirstOrDefault();
                 //Kiem tra nhan vien co ton tai trong he thong khong
                 if (model != null && !string.IsNullOrEmpty(model.TenNV))
                 {
+                    
                     StaticValue.UserLogin = model;
                     //Dang nhap thanh cong:
                     TrangChu frm = new TrangChu();
                     this.Hide();
                     frm.Show();
-                    MessageBox.Show(string.Format("Đăng nhập thành công! Xin chào {0}",model.TenNV), CommonConstant.MESSAGE_INFO,MessageBoxButtons.OK,MessageBoxIcon.Information );
-                }else
+                }
+                else
                 {
                     MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu! Vui lòng thử lại!", CommonConstant.MESSAGE_WARNING, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
@@ -78,5 +79,7 @@ namespace QuanLyTBVT
             this.Hide();
             frm.Show();
         }
+
+
     }
 }

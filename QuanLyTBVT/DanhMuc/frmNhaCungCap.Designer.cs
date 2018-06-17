@@ -60,7 +60,7 @@
             this.labelControl.Location = new System.Drawing.Point(0, 0);
             this.labelControl.Name = "labelControl";
             this.labelControl.Padding = new System.Windows.Forms.Padding(10, 5, 0, 0);
-            this.labelControl.Size = new System.Drawing.Size(1025, 37);
+            this.labelControl.Size = new System.Drawing.Size(1382, 37);
             this.labelControl.TabIndex = 2;
             this.labelControl.Text = "Thông tin Nhà Cung Cấp";
             // 
@@ -71,9 +71,8 @@
             this.groupBox1.Controls.Add(this.materialLabel1);
             this.groupBox1.Controls.Add(this.txtSearchTen);
             this.groupBox1.Controls.Add(this.txtSearchMa);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(0, 37);
+            this.groupBox1.Location = new System.Drawing.Point(188, 56);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1025, 132);
             this.groupBox1.TabIndex = 3;
@@ -155,10 +154,10 @@
             gridLevelNode1.RelationName = "Level1";
             this.grdData.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.grdData.Location = new System.Drawing.Point(0, 226);
+            this.grdData.Location = new System.Drawing.Point(188, 245);
             this.grdData.MainView = this.grvData;
             this.grdData.Name = "grdData";
-            this.grdData.Size = new System.Drawing.Size(1022, 277);
+            this.grdData.Size = new System.Drawing.Size(1022, 424);
             this.grdData.TabIndex = 4;
             this.grdData.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvData});
@@ -197,7 +196,7 @@
             this.bdsData.Buttons.PrevPage.Visible = false;
             this.bdsData.Buttons.Remove.Visible = false;
             this.bdsData.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.bdsData.Location = new System.Drawing.Point(0, 196);
+            this.bdsData.Location = new System.Drawing.Point(188, 215);
             this.bdsData.Name = "bdsData";
             this.bdsData.Size = new System.Drawing.Size(349, 27);
             this.bdsData.TabIndex = 5;
@@ -211,7 +210,7 @@
             this.btnThemMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThemMoi.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemMoi.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnThemMoi.Location = new System.Drawing.Point(383, 181);
+            this.btnThemMoi.Location = new System.Drawing.Point(571, 200);
             this.btnThemMoi.Name = "btnThemMoi";
             this.btnThemMoi.Size = new System.Drawing.Size(103, 42);
             this.btnThemMoi.TabIndex = 10;
@@ -225,7 +224,7 @@
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSua.Location = new System.Drawing.Point(504, 181);
+            this.btnSua.Location = new System.Drawing.Point(692, 200);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(103, 42);
             this.btnSua.TabIndex = 11;
@@ -239,7 +238,7 @@
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnXoa.Location = new System.Drawing.Point(626, 181);
+            this.btnXoa.Location = new System.Drawing.Point(814, 200);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(103, 42);
             this.btnXoa.TabIndex = 13;
@@ -259,7 +258,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.labelControl);
             this.Name = "frmNhaCungCap";
-            this.Size = new System.Drawing.Size(1025, 503);
+            this.Size = new System.Drawing.Size(1382, 699);
             this.Load += new System.EventHandler(this.frmNhaCungCap_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

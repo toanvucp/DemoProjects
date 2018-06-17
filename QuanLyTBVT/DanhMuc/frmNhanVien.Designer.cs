@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThemMoi = new System.Windows.Forms.Button();
@@ -46,6 +46,7 @@
             this.colDiaChi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMoTa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colRole = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAvatar = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemMemoEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
             this.repositoryItemImageEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemImageEdit();
             this.repositoryItemPictureEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
@@ -56,7 +57,6 @@
             this.txtSearchName = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtSearchMa = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.labelControl = new DevExpress.XtraEditors.LabelControl();
-            this.colAvatar = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grdData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).BeginInit();
@@ -72,7 +72,7 @@
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnXoa.Location = new System.Drawing.Point(679, 198);
+            this.btnXoa.Location = new System.Drawing.Point(788, 192);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(103, 42);
             this.btnXoa.TabIndex = 25;
@@ -86,7 +86,7 @@
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSua.Location = new System.Drawing.Point(557, 198);
+            this.btnSua.Location = new System.Drawing.Point(666, 192);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(103, 42);
             this.btnSua.TabIndex = 24;
@@ -100,7 +100,7 @@
             this.btnThemMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThemMoi.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemMoi.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnThemMoi.Location = new System.Drawing.Point(436, 198);
+            this.btnThemMoi.Location = new System.Drawing.Point(545, 192);
             this.btnThemMoi.Name = "btnThemMoi";
             this.btnThemMoi.Size = new System.Drawing.Size(103, 42);
             this.btnThemMoi.TabIndex = 23;
@@ -119,7 +119,7 @@
             this.bdsData.Buttons.PrevPage.Visible = false;
             this.bdsData.Buttons.Remove.Visible = false;
             this.bdsData.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.bdsData.Location = new System.Drawing.Point(28, 216);
+            this.bdsData.Location = new System.Drawing.Point(137, 210);
             this.bdsData.Name = "bdsData";
             this.bdsData.Size = new System.Drawing.Size(349, 27);
             this.bdsData.TabIndex = 22;
@@ -129,10 +129,10 @@
             // 
             // grdData
             // 
-            gridLevelNode2.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
             this.grdData.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
-            this.grdData.Location = new System.Drawing.Point(13, 246);
+            gridLevelNode1});
+            this.grdData.Location = new System.Drawing.Point(86, 240);
             this.grdData.MainView = this.grvData;
             this.grdData.Name = "grdData";
             this.grdData.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
@@ -140,7 +140,7 @@
             this.repositoryItemMemoEdit2,
             this.repositoryItemImageEdit1,
             this.repositoryItemPictureEdit1});
-            this.grdData.Size = new System.Drawing.Size(1086, 277);
+            this.grdData.Size = new System.Drawing.Size(1215, 539);
             this.grdData.TabIndex = 21;
             this.grdData.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvData});
@@ -278,6 +278,12 @@
             this.colRole.Visible = true;
             this.colRole.VisibleIndex = 9;
             // 
+            // colAvatar
+            // 
+            this.colAvatar.Caption = "Avatar";
+            this.colAvatar.FieldName = "Avatar";
+            this.colAvatar.Name = "colAvatar";
+            // 
             // repositoryItemMemoEdit2
             // 
             this.repositoryItemMemoEdit2.Name = "repositoryItemMemoEdit2";
@@ -301,11 +307,10 @@
             this.groupBox1.Controls.Add(this.materialLabel1);
             this.groupBox1.Controls.Add(this.txtSearchName);
             this.groupBox1.Controls.Add(this.txtSearchMa);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(0, 37);
+            this.groupBox1.Location = new System.Drawing.Point(86, 43);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1112, 124);
+            this.groupBox1.Size = new System.Drawing.Size(1215, 124);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm";
@@ -316,7 +321,7 @@
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSearch.Location = new System.Drawing.Point(525, 76);
+            this.btnSearch.Location = new System.Drawing.Point(564, 76);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(103, 42);
             this.btnSearch.TabIndex = 4;
@@ -330,7 +335,7 @@
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(625, 46);
+            this.materialLabel2.Location = new System.Drawing.Point(664, 46);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(101, 19);
@@ -343,7 +348,7 @@
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(103, 46);
+            this.materialLabel1.Location = new System.Drawing.Point(142, 46);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(97, 19);
@@ -354,7 +359,7 @@
             // 
             this.txtSearchName.Depth = 0;
             this.txtSearchName.Hint = "";
-            this.txtSearchName.Location = new System.Drawing.Point(770, 42);
+            this.txtSearchName.Location = new System.Drawing.Point(809, 42);
             this.txtSearchName.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtSearchName.Name = "txtSearchName";
             this.txtSearchName.PasswordChar = '\0';
@@ -369,7 +374,7 @@
             // 
             this.txtSearchMa.Depth = 0;
             this.txtSearchMa.Hint = "";
-            this.txtSearchMa.Location = new System.Drawing.Point(246, 42);
+            this.txtSearchMa.Location = new System.Drawing.Point(285, 42);
             this.txtSearchMa.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtSearchMa.Name = "txtSearchMa";
             this.txtSearchMa.PasswordChar = '\0';
@@ -391,15 +396,9 @@
             this.labelControl.Location = new System.Drawing.Point(0, 0);
             this.labelControl.Name = "labelControl";
             this.labelControl.Padding = new System.Windows.Forms.Padding(10, 5, 0, 0);
-            this.labelControl.Size = new System.Drawing.Size(1112, 37);
+            this.labelControl.Size = new System.Drawing.Size(1358, 37);
             this.labelControl.TabIndex = 19;
             this.labelControl.Text = "Thông tin nhân viên";
-            // 
-            // colAvatar
-            // 
-            this.colAvatar.Caption = "Avatar";
-            this.colAvatar.FieldName = "Avatar";
-            this.colAvatar.Name = "colAvatar";
             // 
             // frmNhanVien
             // 
@@ -413,7 +412,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.labelControl);
             this.Name = "frmNhanVien";
-            this.Size = new System.Drawing.Size(1112, 537);
+            this.Size = new System.Drawing.Size(1358, 810);
             this.Load += new System.EventHandler(this.frmNhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvData)).EndInit();

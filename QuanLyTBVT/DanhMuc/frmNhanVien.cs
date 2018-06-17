@@ -84,7 +84,8 @@ on m.PhongBan equals n.MaPXTD
                             DiaChi = m.DiaChi,
                             Email = m.Email,
                             MaPXTD = n.MaPXTD,
-                            TenPXTD = n.TenPXTD
+                            TenPXTD = n.TenPXTD,
+                            RoleID = m.RoleID
                         };
             BindingSource bs = new BindingSource();
             bs.DataSource = model.ToList();
@@ -120,7 +121,8 @@ on m.PhongBan equals n.MaPXTD
                             DiaChi = m.DiaChi,
                             Email = m.Email,
                             MaPXTD = n.MaPXTD,
-                            TenPXTD = n.TenPXTD
+                            TenPXTD = n.TenPXTD,
+                            RoleID = m.RoleID
                         };
 
             BindingSource bs = new BindingSource();
@@ -168,7 +170,6 @@ on m.PhongBan equals n.MaPXTD
         }
 
 
-        string ImageDir = @"images\";
         Hashtable Images = new Hashtable();
 
         private void grvData_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)

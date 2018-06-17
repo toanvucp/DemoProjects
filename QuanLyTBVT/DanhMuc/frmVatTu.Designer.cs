@@ -61,7 +61,7 @@
             this.labelControl.Location = new System.Drawing.Point(0, 0);
             this.labelControl.Name = "labelControl";
             this.labelControl.Padding = new System.Windows.Forms.Padding(10, 5, 0, 0);
-            this.labelControl.Size = new System.Drawing.Size(974, 37);
+            this.labelControl.Size = new System.Drawing.Size(1316, 37);
             this.labelControl.TabIndex = 5;
             this.labelControl.Text = "Thông tin Vật tư";
             // 
@@ -69,7 +69,7 @@
             // 
             this.cbxLoaiVT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxLoaiVT.FormattingEnabled = true;
-            this.cbxLoaiVT.Location = new System.Drawing.Point(99, 43);
+            this.cbxLoaiVT.Location = new System.Drawing.Point(166, 49);
             this.cbxLoaiVT.Name = "cbxLoaiVT";
             this.cbxLoaiVT.Size = new System.Drawing.Size(382, 29);
             this.cbxLoaiVT.TabIndex = 6;
@@ -80,7 +80,7 @@
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSearch.Location = new System.Drawing.Point(426, 70);
+            this.btnSearch.Location = new System.Drawing.Point(541, 68);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(103, 42);
             this.btnSearch.TabIndex = 4;
@@ -94,7 +94,7 @@
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(503, 37);
+            this.materialLabel2.Location = new System.Drawing.Point(618, 35);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(76, 19);
@@ -107,7 +107,7 @@
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(10, 37);
+            this.materialLabel1.Location = new System.Drawing.Point(125, 35);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(72, 19);
@@ -118,7 +118,7 @@
             // 
             this.txtSearchName.Depth = 0;
             this.txtSearchName.Hint = "";
-            this.txtSearchName.Location = new System.Drawing.Point(648, 33);
+            this.txtSearchName.Location = new System.Drawing.Point(763, 31);
             this.txtSearchName.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtSearchName.Name = "txtSearchName";
             this.txtSearchName.PasswordChar = '\0';
@@ -133,7 +133,7 @@
             // 
             this.txtSearchMa.Depth = 0;
             this.txtSearchMa.Hint = "";
-            this.txtSearchMa.Location = new System.Drawing.Point(153, 33);
+            this.txtSearchMa.Location = new System.Drawing.Point(268, 31);
             this.txtSearchMa.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtSearchMa.Name = "txtSearchMa";
             this.txtSearchMa.PasswordChar = '\0';
@@ -152,9 +152,9 @@
             this.groupBox1.Controls.Add(this.txtSearchName);
             this.groupBox1.Controls.Add(this.materialLabel1);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(17, 78);
+            this.groupBox1.Location = new System.Drawing.Point(84, 84);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(944, 137);
+            this.groupBox1.Size = new System.Drawing.Size(1143, 137);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm";
@@ -165,7 +165,7 @@
             this.materialLabel3.Depth = 0;
             this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel3.Location = new System.Drawing.Point(13, 48);
+            this.materialLabel3.Location = new System.Drawing.Point(80, 54);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
             this.materialLabel3.Size = new System.Drawing.Size(80, 19);
@@ -176,7 +176,7 @@
             // 
             this.chkLoadAll.AutoSize = true;
             this.chkLoadAll.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkLoadAll.Location = new System.Drawing.Point(497, 45);
+            this.chkLoadAll.Location = new System.Drawing.Point(564, 51);
             this.chkLoadAll.Name = "chkLoadAll";
             this.chkLoadAll.Size = new System.Drawing.Size(124, 25);
             this.chkLoadAll.TabIndex = 12;
@@ -190,7 +190,7 @@
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnXoa.Location = new System.Drawing.Point(647, 224);
+            this.btnXoa.Location = new System.Drawing.Point(714, 230);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(103, 42);
             this.btnXoa.TabIndex = 23;
@@ -204,7 +204,7 @@
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSua.Location = new System.Drawing.Point(525, 224);
+            this.btnSua.Location = new System.Drawing.Point(592, 230);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(103, 42);
             this.btnSua.TabIndex = 22;
@@ -218,7 +218,7 @@
             this.btnThemMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThemMoi.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemMoi.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnThemMoi.Location = new System.Drawing.Point(404, 224);
+            this.btnThemMoi.Location = new System.Drawing.Point(471, 230);
             this.btnThemMoi.Name = "btnThemMoi";
             this.btnThemMoi.Size = new System.Drawing.Size(103, 42);
             this.btnThemMoi.TabIndex = 21;
@@ -237,7 +237,7 @@
             this.bdsData.Buttons.PrevPage.Visible = false;
             this.bdsData.Buttons.Remove.Visible = false;
             this.bdsData.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.bdsData.Location = new System.Drawing.Point(32, 239);
+            this.bdsData.Location = new System.Drawing.Point(99, 245);
             this.bdsData.Name = "bdsData";
             this.bdsData.Size = new System.Drawing.Size(349, 27);
             this.bdsData.TabIndex = 20;
@@ -250,10 +250,10 @@
             gridLevelNode1.RelationName = "Level1";
             this.grdData.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.grdData.Location = new System.Drawing.Point(17, 269);
+            this.grdData.Location = new System.Drawing.Point(84, 275);
             this.grdData.MainView = this.grvData;
             this.grdData.Name = "grdData";
-            this.grdData.Size = new System.Drawing.Size(944, 277);
+            this.grdData.Size = new System.Drawing.Size(1143, 401);
             this.grdData.TabIndex = 19;
             this.grdData.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvData});
@@ -291,7 +291,7 @@
             this.Controls.Add(this.cbxLoaiVT);
             this.Controls.Add(this.labelControl);
             this.Name = "frmVatTu";
-            this.Size = new System.Drawing.Size(974, 561);
+            this.Size = new System.Drawing.Size(1316, 700);
             this.Load += new System.EventHandler(this.frmVatTu_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

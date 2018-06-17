@@ -49,7 +49,7 @@
             this.labelControl.Location = new System.Drawing.Point(0, 0);
             this.labelControl.Name = "labelControl";
             this.labelControl.Padding = new System.Windows.Forms.Padding(10, 5, 0, 0);
-            this.labelControl.Size = new System.Drawing.Size(995, 37);
+            this.labelControl.Size = new System.Drawing.Size(1307, 37);
             this.labelControl.TabIndex = 1;
             this.labelControl.Text = "Thông tin Đơn vị";
             // 
@@ -57,7 +57,7 @@
             // 
             this.tlstData.Cursor = System.Windows.Forms.Cursors.Default;
             this.tlstData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tlstData.Location = new System.Drawing.Point(21, 114);
+            this.tlstData.Location = new System.Drawing.Point(209, 133);
             this.tlstData.Name = "tlstData";
             this.tlstData.Size = new System.Drawing.Size(933, 411);
             this.tlstData.TabIndex = 5;
@@ -69,7 +69,7 @@
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnXoa.Location = new System.Drawing.Point(636, 66);
+            this.btnXoa.Location = new System.Drawing.Point(824, 85);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(103, 42);
             this.btnXoa.TabIndex = 22;
@@ -83,7 +83,7 @@
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSua.Location = new System.Drawing.Point(514, 66);
+            this.btnSua.Location = new System.Drawing.Point(702, 85);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(103, 42);
             this.btnSua.TabIndex = 21;
@@ -97,7 +97,7 @@
             this.btnThemMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThemMoi.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemMoi.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnThemMoi.Location = new System.Drawing.Point(393, 66);
+            this.btnThemMoi.Location = new System.Drawing.Point(581, 85);
             this.btnThemMoi.Name = "btnThemMoi";
             this.btnThemMoi.Size = new System.Drawing.Size(103, 42);
             this.btnThemMoi.TabIndex = 20;
@@ -116,7 +116,7 @@
             this.bdsData.Buttons.PrevPage.Visible = false;
             this.bdsData.Buttons.Remove.Visible = false;
             this.bdsData.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.bdsData.Location = new System.Drawing.Point(21, 81);
+            this.bdsData.Location = new System.Drawing.Point(209, 100);
             this.bdsData.Name = "bdsData";
             this.bdsData.Size = new System.Drawing.Size(349, 27);
             this.bdsData.TabIndex = 19;
@@ -138,7 +138,7 @@
             this.Controls.Add(this.tlstData);
             this.Controls.Add(this.labelControl);
             this.Name = "frmDonVi";
-            this.Size = new System.Drawing.Size(995, 539);
+            this.Size = new System.Drawing.Size(1307, 609);
             this.Load += new System.EventHandler(this.frmDonVi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tlstData)).EndInit();
             this.ResumeLayout(false);

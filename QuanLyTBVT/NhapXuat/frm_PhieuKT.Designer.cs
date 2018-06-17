@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.labelControl = new DevExpress.XtraEditors.LabelControl();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearchMa = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -52,6 +52,7 @@
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.btnDuyetPhieu = new System.Windows.Forms.Button();
             this.btnDetails = new System.Windows.Forms.Button();
+            this.colSTT = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grdData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).BeginInit();
@@ -69,7 +70,7 @@
             this.labelControl.Location = new System.Drawing.Point(0, 0);
             this.labelControl.Name = "labelControl";
             this.labelControl.Padding = new System.Windows.Forms.Padding(10, 5, 0, 0);
-            this.labelControl.Size = new System.Drawing.Size(1281, 37);
+            this.labelControl.Size = new System.Drawing.Size(1340, 37);
             this.labelControl.TabIndex = 24;
             this.labelControl.Text = "Thông tin phiếu kiểm tra";
             // 
@@ -121,7 +122,7 @@
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnXoa.Location = new System.Drawing.Point(840, 206);
+            this.btnXoa.Location = new System.Drawing.Point(867, 203);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(103, 42);
             this.btnXoa.TabIndex = 33;
@@ -135,7 +136,7 @@
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSua.Location = new System.Drawing.Point(718, 206);
+            this.btnSua.Location = new System.Drawing.Point(745, 203);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(103, 42);
             this.btnSua.TabIndex = 32;
@@ -149,7 +150,7 @@
             this.btnThemMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThemMoi.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemMoi.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnThemMoi.Location = new System.Drawing.Point(597, 206);
+            this.btnThemMoi.Location = new System.Drawing.Point(624, 203);
             this.btnThemMoi.Name = "btnThemMoi";
             this.btnThemMoi.Size = new System.Drawing.Size(103, 42);
             this.btnThemMoi.TabIndex = 31;
@@ -168,7 +169,7 @@
             this.bdsData.Buttons.PrevPage.Visible = false;
             this.bdsData.Buttons.Remove.Visible = false;
             this.bdsData.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.bdsData.Location = new System.Drawing.Point(15, 221);
+            this.bdsData.Location = new System.Drawing.Point(66, 218);
             this.bdsData.Name = "bdsData";
             this.bdsData.Size = new System.Drawing.Size(349, 27);
             this.bdsData.TabIndex = 30;
@@ -178,10 +179,10 @@
             // 
             // grdData
             // 
-            gridLevelNode2.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
             this.grdData.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
-            this.grdData.Location = new System.Drawing.Point(14, 254);
+            gridLevelNode1});
+            this.grdData.Location = new System.Drawing.Point(65, 251);
             this.grdData.MainView = this.grvData;
             this.grdData.Name = "grdData";
             this.grdData.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
@@ -203,6 +204,7 @@
             this.grvData.Appearance.Row.Options.UseFont = true;
             this.grvData.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.grvData.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colSTT,
             this.colMaPhieuKT,
             this.colNgayNhap,
             this.colNguoiLap,
@@ -228,7 +230,8 @@
             this.colMaPhieuKT.FieldName = "MaPhieuKT";
             this.colMaPhieuKT.Name = "colMaPhieuKT";
             this.colMaPhieuKT.Visible = true;
-            this.colMaPhieuKT.VisibleIndex = 0;
+            this.colMaPhieuKT.VisibleIndex = 1;
+            this.colMaPhieuKT.Width = 160;
             // 
             // repositoryItemMemoEdit1
             // 
@@ -243,7 +246,8 @@
             this.colNgayNhap.FieldName = "NgayLap";
             this.colNgayNhap.Name = "colNgayNhap";
             this.colNgayNhap.Visible = true;
-            this.colNgayNhap.VisibleIndex = 1;
+            this.colNgayNhap.VisibleIndex = 2;
+            this.colNgayNhap.Width = 160;
             // 
             // colNguoiLap
             // 
@@ -252,7 +256,8 @@
             this.colNguoiLap.FieldName = "NguoiLap";
             this.colNguoiLap.Name = "colNguoiLap";
             this.colNguoiLap.Visible = true;
-            this.colNguoiLap.VisibleIndex = 2;
+            this.colNguoiLap.VisibleIndex = 3;
+            this.colNguoiLap.Width = 160;
             // 
             // colNguoiTG
             // 
@@ -261,7 +266,8 @@
             this.colNguoiTG.FieldName = "NguoiThamGia";
             this.colNguoiTG.Name = "colNguoiTG";
             this.colNguoiTG.Visible = true;
-            this.colNguoiTG.VisibleIndex = 3;
+            this.colNguoiTG.VisibleIndex = 4;
+            this.colNguoiTG.Width = 160;
             // 
             // colNgayDuyet
             // 
@@ -272,7 +278,8 @@
             this.colNgayDuyet.FieldName = "NgayDuyet";
             this.colNgayDuyet.Name = "colNgayDuyet";
             this.colNgayDuyet.Visible = true;
-            this.colNgayDuyet.VisibleIndex = 4;
+            this.colNgayDuyet.VisibleIndex = 5;
+            this.colNgayDuyet.Width = 160;
             // 
             // colNguoiDuyet
             // 
@@ -281,7 +288,8 @@
             this.colNguoiDuyet.FieldName = "NguoiDuyet";
             this.colNguoiDuyet.Name = "colNguoiDuyet";
             this.colNguoiDuyet.Visible = true;
-            this.colNguoiDuyet.VisibleIndex = 5;
+            this.colNguoiDuyet.VisibleIndex = 6;
+            this.colNguoiDuyet.Width = 160;
             // 
             // colTrangThai
             // 
@@ -290,7 +298,8 @@
             this.colTrangThai.FieldName = "TrangThai";
             this.colTrangThai.Name = "colTrangThai";
             this.colTrangThai.Visible = true;
-            this.colTrangThai.VisibleIndex = 6;
+            this.colTrangThai.VisibleIndex = 7;
+            this.colTrangThai.Width = 178;
             // 
             // groupBox1
             // 
@@ -300,7 +309,7 @@
             this.groupBox1.Controls.Add(this.materialLabel2);
             this.groupBox1.Controls.Add(this.materialLabel1);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(15, 63);
+            this.groupBox1.Location = new System.Drawing.Point(65, 60);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1215, 137);
             this.groupBox1.TabIndex = 26;
@@ -342,7 +351,7 @@
             this.btnDuyetPhieu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDuyetPhieu.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDuyetPhieu.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnDuyetPhieu.Location = new System.Drawing.Point(962, 206);
+            this.btnDuyetPhieu.Location = new System.Drawing.Point(989, 203);
             this.btnDuyetPhieu.Name = "btnDuyetPhieu";
             this.btnDuyetPhieu.Size = new System.Drawing.Size(114, 42);
             this.btnDuyetPhieu.TabIndex = 34;
@@ -356,13 +365,22 @@
             this.btnDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDetails.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDetails.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnDetails.Location = new System.Drawing.Point(1093, 206);
+            this.btnDetails.Location = new System.Drawing.Point(1120, 203);
             this.btnDetails.Name = "btnDetails";
             this.btnDetails.Size = new System.Drawing.Size(103, 42);
             this.btnDetails.TabIndex = 32;
             this.btnDetails.Text = "Chi tiết";
             this.btnDetails.UseVisualStyleBackColor = false;
             this.btnDetails.Click += new System.EventHandler(this.btnDetails_Click);
+            // 
+            // colSTT
+            // 
+            this.colSTT.Caption = "STT";
+            this.colSTT.FieldName = "STT";
+            this.colSTT.Name = "colSTT";
+            this.colSTT.Visible = true;
+            this.colSTT.VisibleIndex = 0;
+            this.colSTT.Width = 60;
             // 
             // frm_PhieuKT
             // 
@@ -379,7 +397,7 @@
             this.Controls.Add(this.grdData);
             this.Controls.Add(this.groupBox1);
             this.Name = "frm_PhieuKT";
-            this.Size = new System.Drawing.Size(1281, 695);
+            this.Size = new System.Drawing.Size(1340, 695);
             this.Load += new System.EventHandler(this.frm_PhieuKT_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvData)).EndInit();
@@ -415,5 +433,6 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private System.Windows.Forms.Button btnDuyetPhieu;
         public System.Windows.Forms.Button btnDetails;
+        private DevExpress.XtraGrid.Columns.GridColumn colSTT;
     }
 }

@@ -55,11 +55,14 @@
             this.colTTKT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTenVT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMoTa = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTTVT = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemMemoEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).BeginInit();
             this.tctrolView.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit2)).BeginInit();
             this.SuspendLayout();
             // 
             // repositoryItemMemoEdit1
@@ -261,6 +264,8 @@
             this.grdData.Location = new System.Drawing.Point(26, 231);
             this.grdData.MainView = this.grvData;
             this.grdData.Name = "grdData";
+            this.grdData.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemMemoEdit2});
             this.grdData.Size = new System.Drawing.Size(1213, 441);
             this.grdData.TabIndex = 35;
             this.grdData.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -284,8 +289,9 @@
             this.colSN,
             this.colPTKT,
             this.colSoLuong,
-            this.colTTKT,
             this.colTenVT,
+            this.colTTVT,
+            this.colTTKT,
             this.colMoTa});
             this.grvData.GridControl = this.grdData;
             this.grvData.Name = "grvData";
@@ -318,7 +324,7 @@
             this.colSTT.Name = "colSTT";
             this.colSTT.Visible = true;
             this.colSTT.VisibleIndex = 0;
-            this.colSTT.Width = 60;
+            this.colSTT.Width = 66;
             // 
             // colSN
             // 
@@ -328,7 +334,7 @@
             this.colSN.Name = "colSN";
             this.colSN.Visible = true;
             this.colSN.VisibleIndex = 1;
-            this.colSN.Width = 188;
+            this.colSN.Width = 207;
             // 
             // colPTKT
             // 
@@ -346,7 +352,7 @@
             this.colSoLuong.Name = "colSoLuong";
             this.colSoLuong.Visible = true;
             this.colSoLuong.VisibleIndex = 3;
-            this.colSoLuong.Width = 188;
+            this.colSoLuong.Width = 207;
             // 
             // colTTKT
             // 
@@ -355,8 +361,8 @@
             this.colTTKT.FieldName = "TrangThaiKT";
             this.colTTKT.Name = "colTTKT";
             this.colTTKT.Visible = true;
-            this.colTTKT.VisibleIndex = 2;
-            this.colTTKT.Width = 188;
+            this.colTTKT.VisibleIndex = 5;
+            this.colTTKT.Width = 158;
             // 
             // colTenVT
             // 
@@ -365,8 +371,8 @@
             this.colTenVT.FieldName = "TenVT";
             this.colTenVT.Name = "colTenVT";
             this.colTenVT.Visible = true;
-            this.colTenVT.VisibleIndex = 4;
-            this.colTenVT.Width = 198;
+            this.colTenVT.VisibleIndex = 2;
+            this.colTenVT.Width = 218;
             // 
             // colMoTa
             // 
@@ -375,8 +381,22 @@
             this.colMoTa.FieldName = "MoTa";
             this.colMoTa.Name = "colMoTa";
             this.colMoTa.Visible = true;
-            this.colMoTa.VisibleIndex = 5;
-            this.colMoTa.Width = 188;
+            this.colMoTa.VisibleIndex = 6;
+            this.colMoTa.Width = 159;
+            // 
+            // colTTVT
+            // 
+            this.colTTVT.Caption = "Trạng thái vật tư";
+            this.colTTVT.ColumnEdit = this.repositoryItemMemoEdit2;
+            this.colTTVT.FieldName = "TrangThaiVT";
+            this.colTTVT.Name = "colTTVT";
+            this.colTTVT.Visible = true;
+            this.colTTVT.VisibleIndex = 4;
+            this.colTTVT.Width = 180;
+            // 
+            // repositoryItemMemoEdit2
+            // 
+            this.repositoryItemMemoEdit2.Name = "repositoryItemMemoEdit2";
             // 
             // frmCTPKT
             // 
@@ -398,6 +418,7 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -429,5 +450,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colTenVT;
         private DevExpress.XtraGrid.Columns.GridColumn colSTT;
         private DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit repositoryItemMemoEdit1;
+        private DevExpress.XtraGrid.Columns.GridColumn colTTVT;
+        private DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit repositoryItemMemoEdit2;
     }
 }

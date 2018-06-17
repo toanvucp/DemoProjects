@@ -14,7 +14,10 @@ namespace QuanLyTBVT.Model
         public string MaPX { get; set; }
 
         [StringLength(50)]
-        public string MaPXTD { get; set; }
+        public string MaKhoXuat { get; set; }
+
+        [StringLength(50)]
+        public string MaKhoNhap { get; set; }
 
         public DateTime? NgayLap { get; set; }
 
@@ -28,5 +31,11 @@ namespace QuanLyTBVT.Model
 
         [StringLength(250)]
         public string NoiDung { get; set; }
+
+        [StringLength(50)]
+        public string PhieuYC { get; set; }
+
+        [StringLength(50)]
+        public string TrangThai { get; set; }
     }
 }

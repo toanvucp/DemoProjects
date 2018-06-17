@@ -19,15 +19,10 @@ namespace QuanLyTBVT.Model
         public string MaVT { get; set; }
 
         [StringLength(50)]
-        public string MaKhoVT { get; set; }
-
-        [StringLength(50)]
         public string SerialNumber { get; set; }
 
-        public int? TrangThai { get; set; }
-
         [StringLength(50)]
-        public string MaNCC { get; set; }
+        public string TrangThai { get; set; }
 
         public int? SoLuong { get; set; }
 

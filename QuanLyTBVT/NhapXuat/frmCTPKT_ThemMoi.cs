@@ -45,12 +45,12 @@ namespace QuanLyTBVT.NhapXuat
             var model = db.ChiTietPhieuKTs.Find(ID);
             if (model != null)
             {
-
                 this.txtSerialNumber.Text = model.SerialNumber;
                 this.cbxVatTu.SelectedValue = model.MaVT;
                 this.cbxTTKT.SelectedValue = model.TrangThaiKT;
                 this.txtMoTa.Text = model.MoTa;
                 txtSoLuong.Text = model.SoLuong.ToString();
+                this.cbxTTVT.SelectedValue = model.TrangThaiVT;
                 btnSave.Text = "Lưu";
 
                 this.Text = "Chỉnh sửa thông tin chi tiết phiếu kiểm tra";
@@ -68,6 +68,11 @@ namespace QuanLyTBVT.NhapXuat
             this.cbxVatTu.DataSource = sel.GetCbxVatTu(false);
             this.cbxVatTu.DisplayMember = "DisplayMember";
             this.cbxVatTu.ValueMember = "ValueMember";
+
+            this.cbxTTVT.DataSource = sel.GetCbxTTVT(false);
+            this.cbxTTVT.DisplayMember = "DisplayMember";
+            this.cbxTTVT.ValueMember = "ValueMember";
+            
         }
 
         private void Save()
@@ -96,6 +101,7 @@ namespace QuanLyTBVT.NhapXuat
                 model.TrangThaiKT = int.Parse(cbxTTKT.SelectedValue.ToString());
                 model.MaVT = cbxVatTu.SelectedValue.ToString();
                 model.MoTa = txtMoTa.Text;
+                model.TrangThaiVT = cbxTTVT.SelectedValue.ToString();
                 info = "Sửa thông tin phiếu kiểm tra";
             }
             else
@@ -107,6 +113,7 @@ namespace QuanLyTBVT.NhapXuat
                 obj.MaVT = cbxVatTu.SelectedValue.ToString();
                 obj.MaPhieuKT = StaticValue.MaPhieuKT;
                 obj.MoTa = txtMoTa.Text;
+                obj.TrangThaiVT = cbxTTVT.SelectedValue.ToString();
                 info = "Thêm mới chi tiết phiếu kiểm tra";
                 db.ChiTietPhieuKTs.Add(obj);
             }

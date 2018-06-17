@@ -32,5 +32,8 @@ namespace QuanLyTBVT.Model
 
         [StringLength(250)]
         public string MoTa { get; set; }
+
+        [StringLength(50)]
+        public string TrangThaiVT { get; set; }
     }
 }

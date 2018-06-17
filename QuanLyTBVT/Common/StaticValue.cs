@@ -12,5 +12,13 @@ namespace QuanLyTBVT.Common
         public static NhanVien UserLogin;
 
         public static string MaPhieuKT;
+
+        public static string MaPhieuNhap;
+
+        public static string MaPhieuYC;
+
+        public static string MaPhieuXuat;
+
+        public static string RoleID;
     }
 }

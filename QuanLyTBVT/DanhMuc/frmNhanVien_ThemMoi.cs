@@ -193,6 +193,7 @@ namespace QuanLyTBVT.DanhMuc
                 model.GioiTinh = rptNam.Checked ? true : rptNu.Checked ? false : false;
                 model.NgaySinh = dtpNgaySinh.Value;
                 model.TenNV = txtTenNV.Text;
+                model.Password = "123456a@";
                 if (!string.IsNullOrEmpty(Path_Image))
                 {
                     CopyImage(Path_Image, true);

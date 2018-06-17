@@ -19,35 +19,9 @@ namespace QuanLyTBVT.NhapXuat
         public frm_PhieuKT()
         {
             InitializeComponent();
-            grvData.CustomDrawRowIndicator += grvData_customDrawRow;
             SetStatusButton(false);
             this.cbxTrangThai.SelectedIndex = 0;
-        }
-
-        private void grvData_customDrawRow(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
-        {
-            if (e.Info.IsRowIndicator)
-            {
-                if (e.RowHandle < 0)
-                {
-                    e.Info.ImageIndex = 0;
-                    e.Info.DisplayText = string.Empty;
-                }
-                else
-                {
-                    e.Info.ImageIndex = -1;
-                    e.Info.DisplayText = (e.RowHandle + 1).ToString();
-                }
-                SizeF siz = e.Graphics.MeasureString(e.Info.DisplayText, e.Appearance.Font);
-                Int32 _width = Convert.ToInt32(siz.Width);
-                BeginInvoke(new MethodInvoker(delegate { Cal(20, grvData); }));
-            }
-        }
-
-        bool Cal(Int32 _Width, GridView view)
-        {
-            view.IndicatorWidth = view.IndicatorWidth < _Width ? _Width : view.IndicatorWidth;
-            return true;
+            btnDuyetPhieu.Visible = CommonConstant.ISSHOWBTNDUYET;
         }
 
         private void frm_PhieuKT_Load(object sender, EventArgs e)
@@ -57,9 +31,21 @@ namespace QuanLyTBVT.NhapXuat
 
         private void LoadData()
         {
-            var model = db.PhieuKTs.AsNoTracking().ToList();
+            int index = 0;
+            var modelLoad = from m in db.PhieuKTs.AsNoTracking()
+                            select (new
+                            {
+                                STT = index + 1,
+                                m.MaPhieuKT,
+                                m.NgayDuyet,
+                                m.NgayLap,
+                                m.NguoiDuyet,
+                                m.NguoiLap,
+                                m.NguoiThamGia,
+                                m.TrangThai
+                            });
             BindingSource bs = new BindingSource();
-            bs.DataSource = model;
+            bs.DataSource = modelLoad.ToList();
             bdsData.DataSource = bs;
             grdData.DataSource = bs;
             SetStatusButton(false);
@@ -82,8 +68,6 @@ namespace QuanLyTBVT.NhapXuat
                 this.btnSua.BackColor = Color.LightGray;
                 this.btnDuyetPhieu.BackColor = Color.LightGray;
             }
-
-
         }
 
         private void grvData_RowClick(object sender, RowClickEventArgs e)
@@ -131,14 +115,26 @@ namespace QuanLyTBVT.NhapXuat
         private void btnSearch_Click(object sender, EventArgs e)
         {
             string maPhieu = txtSearchMa.Text.Trim();
+            var index = 0;
             int vintstt = cbxTrangThai.SelectedIndex;
             string strTrangThai = cbxTrangThai.Text;
-            var model = db.PhieuKTs.AsNoTracking().Where(
-                m => (string.IsNullOrEmpty(maPhieu) ? true : m.MaPhieuKT.Contains(maPhieu))
-                && (vintstt == 0 ? true : m.TrangThai == strTrangThai)
-                ).ToList();
+            var modelLoad = from m in db.PhieuKTs.AsNoTracking()
+                            where (string.IsNullOrEmpty(maPhieu) ? true : m.MaPhieuKT.Contains(maPhieu))
+                                && (vintstt == 0 ? true : m.TrangThai == strTrangThai)
+                            select new
+                            {
+                                STT = index + 1,
+                                m.MaPhieuKT,
+                                m.NgayDuyet,
+                                m.NgayLap,
+                                m.NguoiDuyet,
+                                m.NguoiLap,
+                                m.NguoiThamGia,
+                                m.TrangThai
+                            };
+
             BindingSource bs = new BindingSource();
-            bs.DataSource = model;
+            bs.DataSource = modelLoad.ToList();
             bdsData.DataSource = bs;
             grdData.DataSource = bs;
             SetStatusButton(false);

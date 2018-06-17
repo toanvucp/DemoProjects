@@ -15,21 +15,13 @@ namespace QuanLyTBVT.Model
         public string MaPX { get; set; }
 
         [StringLength(50)]
-        public string MaPhieuYC { get; set; }
-
-        [StringLength(10)]
-        public string MaPhieuKT { get; set; }
-
-        [StringLength(50)]
         public string MaVT { get; set; }
-
-        [StringLength(50)]
-        public string MaKhoVT { get; set; }
 
         [StringLength(50)]
         public string SerialNumber { get; set; }
 
-        public int? TrangThai { get; set; }
+        [StringLength(50)]
+        public string TrangThai { get; set; }
 
         public int? SoLuong { get; set; }
 
@@ -38,5 +30,8 @@ namespace QuanLyTBVT.Model
 
         [StringLength(250)]
         public string MoTa { get; set; }
+
+        [StringLength(50)]
+        public string TrangThaiVT { get; set; }
     }
 }

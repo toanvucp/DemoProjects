@@ -69,11 +69,6 @@ namespace QuanLyTBVT
                 frmDangNhap frm = new frmDangNhap();
                 frm.Show();
             }
-            else
-            {
-                Home frm = new Home();
-                frm.Show();
-            }
         }
     }
 }

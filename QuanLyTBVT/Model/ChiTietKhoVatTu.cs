@@ -9,28 +9,23 @@ namespace QuanLyTBVT.Model
     [Table("ChiTietKhoVatTu")]
     public partial class ChiTietKhoVatTu
     {
-        [Key]
-        [Column(Order = 0)]
+        public int ID { get; set; }
+
         [StringLength(50)]
         public string MaKhoVT { get; set; }
 
-        [Key]
-        [Column(Order = 1)]
         [StringLength(50)]
         public string MaVT { get; set; }
 
-        public int? SoLuongNhap { get; set; }
+        [StringLength(50)]
+        public string SerialNumber { get; set; }
 
-        public int? SoLuongXuat { get; set; }
+        [StringLength(50)]
+        public string TinhTrangVT { get; set; }
 
-        public int? SoLuongTon { get; set; }
+        [StringLength(50)]
+        public string TrangThai { get; set; }
 
-        public int? TonDauKy { get; set; }
-
-        [Column(TypeName = "money")]
-        public decimal? TriGiaTonKho { get; set; }
-
-        [StringLength(250)]
-        public string GhiChu { get; set; }
+        public int? SoLuong { get; set; }
     }
 }

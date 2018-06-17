@@ -41,6 +41,8 @@
             this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
             this.txtSoLuong = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
+            this.cbxTTVT = new System.Windows.Forms.ComboBox();
+            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
             this.SuspendLayout();
             // 
             // btnHuy
@@ -49,7 +51,7 @@
             this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHuy.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnHuy.Location = new System.Drawing.Point(431, 368);
+            this.btnHuy.Location = new System.Drawing.Point(433, 421);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(117, 49);
             this.btnHuy.TabIndex = 6;
@@ -63,7 +65,7 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSave.Location = new System.Drawing.Point(266, 368);
+            this.btnSave.Location = new System.Drawing.Point(280, 421);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(117, 49);
             this.btnSave.TabIndex = 5;
@@ -208,11 +210,35 @@
             this.materialLabel4.TabIndex = 60;
             this.materialLabel4.Text = "Số lượng";
             // 
+            // cbxTTVT
+            // 
+            this.cbxTTVT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxTTVT.FormattingEnabled = true;
+            this.cbxTTVT.Location = new System.Drawing.Point(297, 348);
+            this.cbxTTVT.Name = "cbxTTVT";
+            this.cbxTTVT.Size = new System.Drawing.Size(401, 29);
+            this.cbxTTVT.TabIndex = 61;
+            // 
+            // materialLabel5
+            // 
+            this.materialLabel5.AutoSize = true;
+            this.materialLabel5.Depth = 0;
+            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel5.Location = new System.Drawing.Point(130, 353);
+            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel5.Name = "materialLabel5";
+            this.materialLabel5.Size = new System.Drawing.Size(118, 19);
+            this.materialLabel5.TabIndex = 62;
+            this.materialLabel5.Text = "Trạng thái vật tư";
+            // 
             // frmCTPKT_ThemMoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(774, 429);
+            this.ClientSize = new System.Drawing.Size(774, 497);
+            this.Controls.Add(this.cbxTTVT);
+            this.Controls.Add(this.materialLabel5);
             this.Controls.Add(this.txtSoLuong);
             this.Controls.Add(this.materialLabel4);
             this.Controls.Add(this.txtMoTa);
@@ -249,5 +275,7 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel6;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtSoLuong;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
+        private System.Windows.Forms.ComboBox cbxTTVT;
+        private MaterialSkin.Controls.MaterialLabel materialLabel5;
     }
 }
