@@ -146,7 +146,7 @@ namespace QuanLyTBVT.NhapXuat
                 ChiTietPhieuNhap obj = new ChiTietPhieuNhap();
                 obj.MaPhieuNhap = maPhieuNhap;
                 obj.SerialNumber = item.SerialNumber;
-                obj.SoLuong = item.SoLuong;
+                obj.SoLuong = int.Parse(item.SoLuong.ToString());
                 obj.TrangThai = item.TrangThaiVT;
                 obj.MoTa = item.MoTa;
                 obj.MaVT = item.MaVT;

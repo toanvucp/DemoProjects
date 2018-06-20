@@ -24,7 +24,7 @@ namespace QuanLyTBVT.Model
         [StringLength(50)]
         public string TrangThai { get; set; }
 
-        public int? SoLuong { get; set; }
+        public int SoLuong { get; set; }
 
         [Column(TypeName = "money")]
         public decimal? DonGia { get; set; }

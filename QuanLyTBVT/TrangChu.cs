@@ -79,7 +79,7 @@ namespace QuanLyTBVT
 
         private void TrangChu_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+           Application.Exit();
         }
 
         private void btnShowPN_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -263,11 +263,38 @@ namespace QuanLyTBVT
                         btnShowPXTD.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
                         btnShowNV.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
                         break;
+                    case "Administrator":
+                       //do nothing
+                        break;
                     default:
+                        rbpageDanhMuc.Visible = false;
+                        rbpNXVT.Visible = false;
+                        rbpReport.Visible = false;
                         break;
                 }
             }
             
+        }
+
+        private void btnRptShowThietBiKho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            employeesNavigationPage.Controls.Clear();
+            BaoCao.frmThongKeKho frm = new BaoCao.frmThongKeKho();
+            employeesNavigationPage.Controls.Add(frm);
+        }
+
+        private void btnShowRptNhap_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            employeesNavigationPage.Controls.Clear();
+            BaoCao.frmBaoCaoNhap frm = new BaoCao.frmBaoCaoNhap();
+            employeesNavigationPage.Controls.Add(frm);
+        }
+
+        private void btnShowRptXuat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            employeesNavigationPage.Controls.Clear();
+            BaoCao.frmBaoCaoXuat frm = new BaoCao.frmBaoCaoXuat();
+            employeesNavigationPage.Controls.Add(frm);
         }
     }
 }

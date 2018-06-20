@@ -178,5 +178,10 @@ namespace QuanLyTBVT.DanhMuc
             }
             LoadData();
         }
+
+        private void labelControl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

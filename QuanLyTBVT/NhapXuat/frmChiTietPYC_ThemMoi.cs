@@ -17,6 +17,7 @@ namespace QuanLyTBVT.NhapXuat
         public frmChiTietPYC_ThemMoi()
         {
             InitializeComponent();
+            LoadComboBox();
         }
         private bool flag = false;
         private DBQLVT db = new DBQLVT();

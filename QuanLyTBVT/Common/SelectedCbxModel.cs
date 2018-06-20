@@ -209,5 +209,35 @@ namespace QuanLyTBVT.Common
             }
             return results.ToList();
         }
+
+        public List<SelectedCbxModel> GetPhieuNhap(bool isSearch)
+        {
+            db = new DBQLVT();
+            List<SelectedCbxModel> result = new List<SelectedCbxModel>();
+            result = db.PhieuNhaps.Where(m => m.TrangThai == CommonConstant.STATUS_DADUYET).Select(m => new SelectedCbxModel() { DisPlayMember = m.MaPhieuNhap, ValueMember = m.MaPhieuNhap }).ToList();
+            if (isSearch)
+            {
+                SelectedCbxModel sel = new SelectedCbxModel();
+                sel.ValueMember = "";
+                sel.DisPlayMember = "---Chọn---";
+                result.Insert(0, sel);
+            }
+            return result;
+        }
+
+        public List<SelectedCbxModel> GetPhieuXuat(bool isSearch)
+        {
+            db = new DBQLVT();
+            List<SelectedCbxModel> result = new List<SelectedCbxModel>();
+            result = db.PhieuXuats.Where(m => m.TrangThai == CommonConstant.STATUS_DADUYET).Select(m => new SelectedCbxModel() { DisPlayMember = m.MaPX, ValueMember = m.MaPX }).ToList();
+            if (isSearch)
+            {
+                SelectedCbxModel sel = new SelectedCbxModel();
+                sel.ValueMember = "";
+                sel.DisPlayMember = "---Chọn---";
+                result.Insert(0, sel);
+            }
+            return result;
+        }
     }
 }

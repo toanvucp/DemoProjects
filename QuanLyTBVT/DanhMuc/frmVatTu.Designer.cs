@@ -64,6 +64,7 @@
             this.labelControl.Size = new System.Drawing.Size(1316, 37);
             this.labelControl.TabIndex = 5;
             this.labelControl.Text = "Thông tin Vật tư";
+            this.labelControl.Click += new System.EventHandler(this.labelControl_Click);
             // 
             // cbxLoaiVT
             // 

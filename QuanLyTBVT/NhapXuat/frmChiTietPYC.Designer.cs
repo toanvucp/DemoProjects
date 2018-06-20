@@ -45,8 +45,8 @@
             this.colSoLuong = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTenVT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDVT = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMoTa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemMemoEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
+            this.colMoTa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvData)).BeginInit();
@@ -116,6 +116,7 @@
             this.btnXoa.TabIndex = 44;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -129,6 +130,7 @@
             this.btnSua.TabIndex = 43;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThemMoi
             // 
@@ -142,6 +144,7 @@
             this.btnThemMoi.TabIndex = 42;
             this.btnThemMoi.Text = "Thêm mới";
             this.btnThemMoi.UseVisualStyleBackColor = false;
+            this.btnThemMoi.Click += new System.EventHandler(this.btnThemMoi_Click);
             // 
             // bdsData
             // 
@@ -255,6 +258,10 @@
             this.colDVT.VisibleIndex = 3;
             this.colDVT.Width = 200;
             // 
+            // repositoryItemMemoEdit1
+            // 
+            this.repositoryItemMemoEdit1.Name = "repositoryItemMemoEdit1";
+            // 
             // colMoTa
             // 
             this.colMoTa.Caption = "Mô tả";
@@ -263,10 +270,6 @@
             this.colMoTa.Visible = true;
             this.colMoTa.VisibleIndex = 4;
             this.colMoTa.Width = 467;
-            // 
-            // repositoryItemMemoEdit1
-            // 
-            this.repositoryItemMemoEdit1.Name = "repositoryItemMemoEdit1";
             // 
             // frmChiTietPYC
             // 

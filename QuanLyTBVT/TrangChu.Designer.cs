@@ -54,17 +54,22 @@
             this.btnShowCTPYC = new DevExpress.XtraBars.BarButtonItem();
             this.btnShowPhieuXuat = new DevExpress.XtraBars.BarButtonItem();
             this.btnShowCTPX = new DevExpress.XtraBars.BarButtonItem();
+            this.btnRptShowThietBiKho = new DevExpress.XtraBars.BarButtonItem();
+            this.btnShowRptNhap = new DevExpress.XtraBars.BarButtonItem();
+            this.btnShowRptXuat = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbpageDanhMuc = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rbpNXVT = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rbpReport = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribpageReport = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.navBarControl = new DevExpress.XtraNavBar.NavBarControl();
             this.employeesNavBarGroup = new DevExpress.XtraNavBar.NavBarGroup();
@@ -122,15 +127,19 @@
             this.btnShowPhieuYC,
             this.btnShowCTPYC,
             this.btnShowPhieuXuat,
-            this.btnShowCTPX});
+            this.btnShowCTPX,
+            this.btnRptShowThietBiKho,
+            this.btnShowRptNhap,
+            this.btnShowRptXuat});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 21;
+            this.ribbonControl.MaxItemId = 24;
             this.ribbonControl.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage,
             this.rbpageDanhMuc,
-            this.ribbonPage2});
+            this.rbpNXVT,
+            this.rbpReport});
             this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.ribbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl.Size = new System.Drawing.Size(917, 151);
@@ -354,6 +363,33 @@
             this.btnShowCTPX.Name = "btnShowCTPX";
             this.btnShowCTPX.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnShowCTPX_ItemClick);
             // 
+            // btnRptShowThietBiKho
+            // 
+            this.btnRptShowThietBiKho.Caption = "Báo cáo Vật tư trong kho";
+            this.btnRptShowThietBiKho.Glyph = ((System.Drawing.Image)(resources.GetObject("btnRptShowThietBiKho.Glyph")));
+            this.btnRptShowThietBiKho.Id = 21;
+            this.btnRptShowThietBiKho.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnRptShowThietBiKho.LargeGlyph")));
+            this.btnRptShowThietBiKho.Name = "btnRptShowThietBiKho";
+            this.btnRptShowThietBiKho.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnRptShowThietBiKho_ItemClick);
+            // 
+            // btnShowRptNhap
+            // 
+            this.btnShowRptNhap.Caption = "Báo cáo Nhập Vật tư - Thiết bị";
+            this.btnShowRptNhap.Glyph = ((System.Drawing.Image)(resources.GetObject("btnShowRptNhap.Glyph")));
+            this.btnShowRptNhap.Id = 22;
+            this.btnShowRptNhap.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnShowRptNhap.LargeGlyph")));
+            this.btnShowRptNhap.Name = "btnShowRptNhap";
+            this.btnShowRptNhap.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnShowRptNhap_ItemClick);
+            // 
+            // btnShowRptXuat
+            // 
+            this.btnShowRptXuat.Caption = "Báo cáo Xuất Vật tư - Thiết bị";
+            this.btnShowRptXuat.Glyph = ((System.Drawing.Image)(resources.GetObject("btnShowRptXuat.Glyph")));
+            this.btnShowRptXuat.Id = 23;
+            this.btnShowRptXuat.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnShowRptXuat.LargeGlyph")));
+            this.btnShowRptXuat.Name = "btnShowRptXuat";
+            this.btnShowRptXuat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnShowRptXuat_ItemClick);
+            // 
             // ribbonPage
             // 
             this.ribbonPage.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -404,43 +440,58 @@
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "Quản lý danh mục";
             // 
-            // ribbonPage2
+            // rbpNXVT
             // 
-            this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.rbpNXVT.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup3,
             this.ribbonPageGroup4,
             this.ribbonPageGroup7,
             this.ribbonPageGroup8});
-            this.ribbonPage2.Name = "ribbonPage2";
-            this.ribbonPage2.Text = "Quản lý Nhập Xuất Vật tư";
+            this.rbpNXVT.Name = "rbpNXVT";
+            this.rbpNXVT.Text = "Quản lý Nhập Xuất Vật tư";
             // 
             // ribbonPageGroup3
             // 
             this.ribbonPageGroup3.ItemLinks.Add(this.btnShowPhieuKT);
             this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem2);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            this.ribbonPageGroup3.Text = "Quản lý Kiểm tra Vật tư - Thiết bị";
+            this.ribbonPageGroup3.Text = "Quản lý Kiểm tra Vật tư ";
             // 
             // ribbonPageGroup4
             // 
             this.ribbonPageGroup4.ItemLinks.Add(this.btnShowPN);
             this.ribbonPageGroup4.ItemLinks.Add(this.btnShowCTPN);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
-            this.ribbonPageGroup4.Text = "Quản lý Nhập Vật Tư Thiết bị";
+            this.ribbonPageGroup4.Text = "Quản lý Nhập Vật Tư ";
             // 
             // ribbonPageGroup7
             // 
             this.ribbonPageGroup7.ItemLinks.Add(this.btnShowPhieuYC);
             this.ribbonPageGroup7.ItemLinks.Add(this.btnShowCTPYC);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
-            this.ribbonPageGroup7.Text = "Quản lý Yêu cầu Vật tư - Thiết bị";
+            this.ribbonPageGroup7.Text = "Quản lý Yêu cầu Vật tư  ";
             // 
             // ribbonPageGroup8
             // 
             this.ribbonPageGroup8.ItemLinks.Add(this.btnShowPhieuXuat);
             this.ribbonPageGroup8.ItemLinks.Add(this.btnShowCTPX);
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
-            this.ribbonPageGroup8.Text = "Quản lý Xuất Vật tư - Thiết bị";
+            this.ribbonPageGroup8.Text = "Quản lý Xuất Vật tư ";
+            // 
+            // rbpReport
+            // 
+            this.rbpReport.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribpageReport});
+            this.rbpReport.Name = "rbpReport";
+            this.rbpReport.Text = "Báo cáo - Thống kê";
+            // 
+            // ribpageReport
+            // 
+            this.ribpageReport.ItemLinks.Add(this.btnRptShowThietBiKho);
+            this.ribpageReport.ItemLinks.Add(this.btnShowRptNhap);
+            this.ribpageReport.ItemLinks.Add(this.btnShowRptXuat);
+            this.ribpageReport.Name = "ribpageReport";
+            this.ribpageReport.Text = "Báo cáo Thống kê";
             // 
             // ribbonStatusBar
             // 
@@ -638,7 +689,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraBars.BarButtonItem btnShowPhieuKT;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
+        private DevExpress.XtraBars.Ribbon.RibbonPage rbpNXVT;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.BarButtonItem btnShowPN;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
@@ -660,5 +711,10 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
         private DevExpress.XtraBars.BarButtonItem btnShowPhieuXuat;
         private DevExpress.XtraBars.BarButtonItem btnShowCTPX;
+        private DevExpress.XtraBars.Ribbon.RibbonPage rbpReport;
+        private DevExpress.XtraBars.BarButtonItem btnRptShowThietBiKho;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribpageReport;
+        private DevExpress.XtraBars.BarButtonItem btnShowRptNhap;
+        private DevExpress.XtraBars.BarButtonItem btnShowRptXuat;
     }
 }

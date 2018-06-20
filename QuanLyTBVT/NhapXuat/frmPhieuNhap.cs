@@ -192,7 +192,7 @@ namespace QuanLyTBVT.NhapXuat
                     ChiTietKhoVatTu kho = new ChiTietKhoVatTu();
                     kho.MaKhoVT = maKho;
                     kho.MaVT = item.MaVT;
-                    kho.SoLuong = item.SoLuong;
+                    kho.SoLuong = int.Parse(item.SoLuong.ToString());
                     kho.TinhTrangVT = item.TrangThai;
                     kho.TrangThai = CommonConstant.STATUS_CHITIETKHO_MOI;
                     kho.SerialNumber = item.SerialNumber;

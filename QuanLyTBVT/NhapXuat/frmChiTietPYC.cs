@@ -100,5 +100,60 @@ namespace QuanLyTBVT.NhapXuat
             }
 
         }
+
+        private void btnThemMoi_Click(object sender, EventArgs e)
+        {
+            frmChiTietPYC_ThemMoi frm = new frmChiTietPYC_ThemMoi();
+            frm.Closed += delegate
+            {
+                LoadData();
+                this.Refresh();
+            };
+            frm.ShowDialog();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            string maCTYC = grvData.GetRowCellValue(grvData.FocusedRowHandle, "ID").ToString();
+            if (string.IsNullOrEmpty(maCTYC))
+            {
+                MessageBox.Show(string.Format("Vui lòng chọn bản ghi cần sửa!"), CommonConstant.MESSAGE_WARNING, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            frmChiTietPYC_ThemMoi frm = new frmChiTietPYC_ThemMoi(2, maCTYC);
+            frm.Closed += delegate
+            {
+                LoadData();
+                this.Refresh();
+            };
+            frm.ShowDialog();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            string maCTYC = grvData.GetRowCellValue(grvData.FocusedRowHandle, "ID").ToString();
+            if (string.IsNullOrEmpty(maCTYC))
+            {
+                MessageBox.Show(string.Format("Vui lòng chọn bản ghi cần xóa!"), CommonConstant.MESSAGE_WARNING, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (MessageBox.Show("Bạn có muốn xóa bản ghi này không?", CommonConstant.MESSAGE_INFO, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+
+                //Duyet ban ghi
+                var model = db.ChiTietPhieuYCs.Find(maCTYC); ;
+                db.ChiTietPhieuYCs.Remove(model);
+                int record = db.SaveChanges();
+                if (record > 0)
+                {
+                    MessageBox.Show("Xóa bản ghi thành công.", CommonConstant.MESSAGE_INFO, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show(string.Format("Xảy ra lỗi, vui lòng kiểm tra lại!"), CommonConstant.MESSAGE_WARNING, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            LoadData();
+        }
     }
 }
